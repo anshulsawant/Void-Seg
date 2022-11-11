@@ -1,0 +1,7 @@
+import tensorflow as tf
+from tensorflow import keras
+
+def distance_loss(y_true, y_pred, distances):
+    weights = distances + 1
+    bce = keras.backend.binary_crossentropy(y_true, y_pred)
+    return keras.backend.mean(bce*weights)

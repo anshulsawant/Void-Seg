@@ -1,0 +1,359 @@
+{
+  "_via_attributes": {
+    "file": {},
+    "region": {}
+  },
+  "_via_data_format_version": "2.0.10",
+  "_via_image_id_list": [
+    "100kX_300kV_0651_1_0.png152369",
+    "100kX_300kV_0651_1_1.png149326",
+    "100kX_300kV_0651_1_2.png147615",
+    "100kX_300kV_0651_1_3.png142442",
+    "100kX_300kV_0651_2_2.png141909",
+    "100kX_300kV_0651_3_1.png134825",
+    "100kX_300kV_0651_3_2.png129821",
+    "100kX_300kV_0651_3_3.png127513",
+    "100kX_300kV_0651_4_0.png127266",
+    "100kX_300kV_0651_5_0.png146057",
+    "100kX_300kV_0651_5_1.png140180",
+    "100kX_300kV_0651_6_1.png138858",
+    "100kX_300kV_0651_6_2.png138407",
+    "100kX_300kV_0651_7_0.png128429",
+    "100kX_300kV_0651_7_1.png125905",
+    "100kX_300kV_0651_8_1.png130686"
+  ],
+  "_via_img_metadata": {
+    "100kX_300kV_0651_1_0.png152369": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_1_0.png",
+      "regions": [],
+      "size": 152369
+    },
+    "100kX_300kV_0651_1_1.png149326": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_1_1.png",
+      "regions": [],
+      "size": 149326
+    },
+    "100kX_300kV_0651_1_2.png147615": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_1_2.png",
+      "regions": [],
+      "size": 147615
+    },
+    "100kX_300kV_0651_1_3.png142442": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_1_3.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 360,
+            "cy": 372,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 25.71,
+            "theta": 2.906
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 507,
+            "cy": 492,
+            "name": "ellipse",
+            "rx": 21.471,
+            "ry": 26,
+            "theta": 2.657
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 405,
+            "cy": 512,
+            "name": "ellipse",
+            "rx": 18.682,
+            "ry": 16,
+            "theta": -0.271
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 196,
+            "cy": 197,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 35.847,
+            "theta": 2.097
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 146,
+            "cy": 455,
+            "name": "ellipse",
+            "rx": 27,
+            "ry": 26,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              49,
+              84,
+              98,
+              127,
+              133,
+              98,
+              78
+            ],
+            "all_points_y": [
+              17,
+              91,
+              99,
+              87,
+              72,
+              2,
+              2
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              2,
+              23,
+              41,
+              2
+            ],
+            "all_points_y": [
+              156,
+              148,
+              196,
+              211
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              510,
+              461,
+              460,
+              494,
+              510
+            ],
+            "all_points_y": [
+              41,
+              64,
+              75,
+              142,
+              134
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              157,
+              170,
+              187,
+              223,
+              229,
+              214
+            ],
+            "all_points_y": [
+              272,
+              305,
+              309,
+              295,
+              283,
+              249
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              374,
+              411,
+              408,
+              368,
+              314
+            ],
+            "all_points_y": [
+              37,
+              108,
+              125,
+              145,
+              58
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              246,
+              270,
+              341,
+              321,
+              305
+            ],
+            "all_points_y": [
+              62,
+              114,
+              81,
+              41,
+              35
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              304,
+              320,
+              332,
+              372,
+              371,
+              356,
+              343,
+              317
+            ],
+            "all_points_y": [
+              227,
+              273,
+              279,
+              268,
+              238,
+              215,
+              210,
+              214
+            ],
+            "name": "polygon"
+          }
+        }
+      ],
+      "size": 142442
+    },
+    "100kX_300kV_0651_2_2.png141909": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_2_2.png",
+      "regions": [],
+      "size": 141909
+    },
+    "100kX_300kV_0651_3_1.png134825": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_3_1.png",
+      "regions": [],
+      "size": 134825
+    },
+    "100kX_300kV_0651_3_2.png129821": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_3_2.png",
+      "regions": [],
+      "size": 129821
+    },
+    "100kX_300kV_0651_3_3.png127513": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_3_3.png",
+      "regions": [],
+      "size": 127513
+    },
+    "100kX_300kV_0651_4_0.png127266": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_4_0.png",
+      "regions": [],
+      "size": 127266
+    },
+    "100kX_300kV_0651_5_0.png146057": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_5_0.png",
+      "regions": [],
+      "size": 146057
+    },
+    "100kX_300kV_0651_5_1.png140180": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_5_1.png",
+      "regions": [],
+      "size": 140180
+    },
+    "100kX_300kV_0651_6_1.png138858": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_6_1.png",
+      "regions": [],
+      "size": 138858
+    },
+    "100kX_300kV_0651_6_2.png138407": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_6_2.png",
+      "regions": [],
+      "size": 138407
+    },
+    "100kX_300kV_0651_7_0.png128429": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_7_0.png",
+      "regions": [],
+      "size": 128429
+    },
+    "100kX_300kV_0651_7_1.png125905": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_7_1.png",
+      "regions": [],
+      "size": 125905
+    },
+    "100kX_300kV_0651_8_1.png130686": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_8_1.png",
+      "regions": [],
+      "size": 130686
+    }
+  },
+  "_via_settings": {
+    "core": {
+      "buffer_size": 18,
+      "default_filepath": "",
+      "filepath": {}
+    },
+    "project": {
+      "name": "100kX_300kV_0651_1_3_Masked"
+    },
+    "ui": {
+      "annotation_editor_fontsize": 0.8,
+      "annotation_editor_height": 25,
+      "image": {
+        "on_image_annotation_editor_placement": "NEAR_REGION",
+        "region_color": "__via_default_region_color__",
+        "region_label": "__via_region_id__",
+        "region_label_font": "10px Sans"
+      },
+      "image_grid": {
+        "img_height": 80,
+        "rshape_fill": "none",
+        "rshape_fill_opacity": 0.3,
+        "rshape_stroke": "yellow",
+        "rshape_stroke_width": 2,
+        "show_image_policy": "all",
+        "show_region_shape": true
+      },
+      "leftsidebar_width": 18
+    }
+  }
+}

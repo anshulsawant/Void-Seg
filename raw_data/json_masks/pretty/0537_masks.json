@@ -1,0 +1,5661 @@
+{
+  "_via_attributes": {
+    "file": {},
+    "region": {}
+  },
+  "_via_data_format_version": "2.0.10",
+  "_via_image_id_list": [
+    "100kX_300kV_0537_2_1.png159711",
+    "100kX_300kV_0537_4_1.png164816",
+    "100kX_300kV_0537_6_2.png159357",
+    "100kX_300kV_0537_11_3.png158816",
+    "100kX_300kV_0537_12_0.png159282",
+    "100kX_300kV_0537_13_1.png160839",
+    "100kX_300kV_0537_14_2.png150282",
+    "100kX_300kV_0537_15_2.png155747",
+    "100kX_300kV_0651_2_0.png143927",
+    "100kX_300kV_0651_4_1.png131032",
+    "100kX_300kV_0651_6_3.png138819",
+    "100kX_300kV_0651_7_2.png132107",
+    "100kX_300kV_0651_9_1.png144081",
+    "100kX_300kV_0651_16_0.png131988",
+    "100kX_300kV_0651_16_1.png139288"
+  ],
+  "_via_img_metadata": {
+    "100kX_300kV_0537_11_3.png158816": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0537_11_3.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              17,
+              27,
+              28,
+              28,
+              2,
+              2,
+              18
+            ],
+            "all_points_y": [
+              30,
+              23,
+              14,
+              3,
+              2,
+              34,
+              30
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              22,
+              39,
+              42,
+              38,
+              30,
+              11,
+              2,
+              2,
+              16,
+              24
+            ],
+            "all_points_y": [
+              88,
+              101,
+              115,
+              130,
+              140,
+              148,
+              151,
+              74,
+              78,
+              89
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              333,
+              344,
+              349,
+              351,
+              326,
+              333
+            ],
+            "all_points_y": [
+              9,
+              9,
+              3,
+              0,
+              1,
+              9
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              388,
+              404,
+              422,
+              440,
+              446,
+              383,
+              379,
+              380,
+              388
+            ],
+            "all_points_y": [
+              25,
+              29,
+              27,
+              10,
+              0,
+              1,
+              6,
+              16,
+              25
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              502,
+              497,
+              505,
+              512,
+              510,
+              505,
+              501
+            ],
+            "all_points_y": [
+              160,
+              164,
+              175,
+              184,
+              155,
+              157,
+              160
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              484,
+              464,
+              463,
+              470,
+              475,
+              486,
+              500,
+              511,
+              512,
+              500,
+              482
+            ],
+            "all_points_y": [
+              259,
+              270,
+              281,
+              296,
+              308,
+              313,
+              307,
+              302,
+              252,
+              250,
+              260
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              337,
+              333,
+              324,
+              306,
+              295,
+              285,
+              297,
+              364,
+              355,
+              336
+            ],
+            "all_points_y": [
+              481,
+              472,
+              462,
+              465,
+              477,
+              494,
+              510,
+              511,
+              497,
+              481
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 30,
+            "cy": 350,
+            "name": "ellipse",
+            "rx": 27,
+            "ry": 21.26,
+            "theta": 2.423
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 127,
+            "cy": 435,
+            "name": "ellipse",
+            "rx": 33,
+            "ry": 42.638,
+            "theta": -0.885
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 187,
+            "cy": 373,
+            "name": "ellipse",
+            "rx": 23,
+            "ry": 33.971,
+            "theta": -0.827
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 145,
+            "cy": 310,
+            "name": "ellipse",
+            "rx": 52.402,
+            "ry": 47,
+            "theta": -0.731
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 322,
+            "cy": 74,
+            "name": "ellipse",
+            "rx": 32,
+            "ry": 19.723,
+            "theta": 2.61
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 472,
+            "cy": 76,
+            "name": "ellipse",
+            "rx": 26,
+            "ry": 24,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 150,
+            "cy": 140,
+            "name": "ellipse",
+            "rx": 34.059,
+            "ry": 35,
+            "theta": 3.083
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 133,
+            "cy": 197,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 15.264,
+            "theta": 2.59
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              278,
+              255,
+              240,
+              232,
+              229,
+              246,
+              271,
+              288,
+              313,
+              313,
+              304,
+              274
+            ],
+            "all_points_y": [
+              202,
+              196,
+              203,
+              219,
+              233,
+              248,
+              256,
+              257,
+              243,
+              226,
+              208,
+              200
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              226,
+              211,
+              207,
+              208,
+              220,
+              236,
+              254,
+              269,
+              264,
+              242
+            ],
+            "all_points_y": [
+              162,
+              172,
+              183,
+              193,
+              206,
+              213,
+              211,
+              198,
+              181,
+              161
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 343,
+            "cy": 176,
+            "name": "ellipse",
+            "rx": 37.483,
+            "ry": 33,
+            "theta": -0.767
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 461,
+            "cy": 224,
+            "name": "ellipse",
+            "rx": 30,
+            "ry": 21.471,
+            "theta": -0.484
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 396,
+            "cy": 322,
+            "name": "ellipse",
+            "rx": 35,
+            "ry": 21.26,
+            "theta": 2.423
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 475,
+            "cy": 321,
+            "name": "ellipse",
+            "rx": 28,
+            "ry": 29.682,
+            "theta": -0.569
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 297,
+            "cy": 344,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 18.439,
+            "theta": -0.862
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 292,
+            "cy": 414,
+            "name": "ellipse",
+            "rx": 32,
+            "ry": 28,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 389,
+            "cy": 407,
+            "name": "ellipse",
+            "rx": 36,
+            "ry": 21.401,
+            "theta": 2.489
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 468,
+            "cy": 448,
+            "name": "ellipse",
+            "rx": 27,
+            "ry": 36.235,
+            "theta": -0.883
+          }
+        }
+      ],
+      "size": 158816
+    },
+    "100kX_300kV_0537_12_0.png159282": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0537_12_0.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              34,
+              44,
+              61,
+              68,
+              25,
+              34
+            ],
+            "all_points_y": [
+              501,
+              498,
+              504,
+              510,
+              510,
+              502
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              307,
+              321,
+              341,
+              357,
+              368,
+              295,
+              298,
+              307
+            ],
+            "all_points_y": [
+              488,
+              483,
+              484,
+              497,
+              510,
+              511,
+              501,
+              488
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              443,
+              451,
+              462,
+              478,
+              499,
+              509,
+              511,
+              504,
+              421,
+              433,
+              443
+            ],
+            "all_points_y": [
+              483,
+              470,
+              463,
+              460,
+              473,
+              482,
+              491,
+              510,
+              511,
+              494,
+              483
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              86,
+              73,
+              52,
+              38,
+              21,
+              11,
+              0,
+              0,
+              12,
+              27,
+              40,
+              51,
+              63,
+              77,
+              91,
+              84
+            ],
+            "all_points_y": [
+              402,
+              423,
+              440,
+              447,
+              446,
+              437,
+              424,
+              407,
+              394,
+              378,
+              367,
+              360,
+              358,
+              370,
+              393,
+              406
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              72,
+              83,
+              99,
+              114,
+              123,
+              124,
+              120,
+              114,
+              60,
+              74
+            ],
+            "all_points_y": [
+              18,
+              33,
+              41,
+              35,
+              25,
+              14,
+              7,
+              3,
+              2,
+              19
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              498,
+              477,
+              473,
+              479,
+              492,
+              510,
+              511,
+              506,
+              497
+            ],
+            "all_points_y": [
+              65,
+              73,
+              86,
+              107,
+              111,
+              107,
+              72,
+              66,
+              66
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              30,
+              48,
+              61,
+              75,
+              86,
+              86,
+              76,
+              64,
+              49,
+              39,
+              29,
+              16,
+              11,
+              6,
+              6,
+              8,
+              19,
+              27,
+              30
+            ],
+            "all_points_y": [
+              220,
+              212,
+              209,
+              215,
+              228,
+              242,
+              260,
+              272,
+              281,
+              286,
+              288,
+              283,
+              279,
+              270,
+              261,
+              246,
+              232,
+              222,
+              221
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              14,
+              22,
+              34,
+              43,
+              43,
+              40,
+              29,
+              19,
+              9,
+              6,
+              6,
+              6,
+              14
+            ],
+            "all_points_y": [
+              50,
+              46,
+              48,
+              60,
+              74,
+              82,
+              86,
+              87,
+              81,
+              74,
+              67,
+              59,
+              51
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 48,
+            "cy": 175,
+            "name": "ellipse",
+            "rx": 27,
+            "ry": 21.401,
+            "theta": 2.489
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 70,
+            "cy": 158,
+            "name": "ellipse",
+            "rx": 26,
+            "ry": 24.207,
+            "theta": 2.473
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 87,
+            "cy": 91,
+            "name": "ellipse",
+            "rx": 22.627,
+            "ry": 27,
+            "theta": -0.785
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 117,
+            "cy": 142,
+            "name": "ellipse",
+            "rx": 20,
+            "ry": 20,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 171,
+            "cy": 92,
+            "name": "ellipse",
+            "rx": 32,
+            "ry": 36.892,
+            "theta": -0.998
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 119,
+            "cy": 325,
+            "name": "ellipse",
+            "rx": 45,
+            "ry": 34.713,
+            "theta": 2.417
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 215,
+            "cy": 412,
+            "name": "ellipse",
+            "rx": 36,
+            "ry": 25.495,
+            "theta": 2.412
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 375,
+            "cy": 431,
+            "name": "ellipse",
+            "rx": 28.601,
+            "ry": 44,
+            "theta": 2.207
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 384,
+            "cy": 263,
+            "name": "ellipse",
+            "rx": 29.732,
+            "ry": 30,
+            "theta": -0.738
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 237,
+            "cy": 233,
+            "name": "ellipse",
+            "rx": 39,
+            "ry": 24.083,
+            "theta": -0.727
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 218,
+            "cy": 172,
+            "name": "ellipse",
+            "rx": 46,
+            "ry": 35.355,
+            "theta": 2.356
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              231,
+              236,
+              252,
+              276,
+              308,
+              321,
+              315,
+              303,
+              281,
+              265,
+              241,
+              232,
+              229,
+              229
+            ],
+            "all_points_y": [
+              116,
+              115,
+              118,
+              135,
+              149,
+              162,
+              178,
+              178,
+              170,
+              162,
+              145,
+              133,
+              122,
+              119
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 280,
+            "cy": 98,
+            "name": "ellipse",
+            "rx": 12,
+            "ry": 13,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              328,
+              309,
+              297,
+              286,
+              287,
+              291,
+              302,
+              320,
+              335,
+              341,
+              338,
+              340,
+              349,
+              363,
+              369,
+              366,
+              353,
+              329
+            ],
+            "all_points_y": [
+              67,
+              80,
+              95,
+              104,
+              118,
+              133,
+              147,
+              168,
+              162,
+              147,
+              132,
+              123,
+              119,
+              113,
+              102,
+              87,
+              73,
+              67
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              423,
+              399,
+              398,
+              404,
+              417,
+              439,
+              458,
+              462,
+              454,
+              444,
+              422
+            ],
+            "all_points_y": [
+              32,
+              46,
+              62,
+              81,
+              95,
+              97,
+              88,
+              75,
+              56,
+              40,
+              33
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              401,
+              391,
+              392,
+              398,
+              413,
+              427,
+              457,
+              478,
+              491,
+              496,
+              490,
+              468,
+              438,
+              413,
+              398
+            ],
+            "all_points_y": [
+              88,
+              98,
+              115,
+              129,
+              148,
+              155,
+              154,
+              140,
+              123,
+              95,
+              85,
+              76,
+              75,
+              79,
+              92
+            ],
+            "name": "polyline"
+          }
+        }
+      ],
+      "size": 159282
+    },
+    "100kX_300kV_0537_13_1.png160839": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0537_13_1.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              484,
+              494,
+              505,
+              512,
+              510,
+              484,
+              482,
+              485
+            ],
+            "all_points_y": [
+              13,
+              22,
+              27,
+              27,
+              1,
+              0,
+              10,
+              15
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              19,
+              28,
+              28,
+              23,
+              10,
+              1,
+              1,
+              21
+            ],
+            "all_points_y": [
+              181,
+              189,
+              201,
+              215,
+              222,
+              222,
+              172,
+              181
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              10,
+              16,
+              22,
+              22,
+              14,
+              2,
+              1,
+              12
+            ],
+            "all_points_y": [
+              341,
+              348,
+              363,
+              375,
+              389,
+              393,
+              336,
+              340
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              365,
+              379,
+              396,
+              413,
+              431,
+              438,
+              359,
+              364
+            ],
+            "all_points_y": [
+              505,
+              496,
+              491,
+              490,
+              500,
+              511,
+              511,
+              506
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              248,
+              244,
+              230,
+              230,
+              232,
+              331,
+              349,
+              368,
+              373,
+              395,
+              414,
+              434,
+              441,
+              452,
+              471,
+              483,
+              485,
+              485,
+              479,
+              468,
+              440,
+              413,
+              391,
+              370,
+              353,
+              336,
+              315,
+              285,
+              270,
+              258,
+              247
+            ],
+            "all_points_y": [
+              235,
+              248,
+              319,
+              336,
+              342,
+              426,
+              433,
+              441,
+              441,
+              437,
+              431,
+              413,
+              396,
+              373,
+              349,
+              332,
+              318,
+              304,
+              294,
+              279,
+              256,
+              223,
+              204,
+              197,
+              193,
+              194,
+              196,
+              205,
+              213,
+              222,
+              237
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              430,
+              437,
+              452,
+              477,
+              481,
+              481,
+              466,
+              449,
+              431,
+              424,
+              407,
+              400,
+              400,
+              405,
+              432
+            ],
+            "all_points_y": [
+              461,
+              468,
+              476,
+              462,
+              446,
+              431,
+              414,
+              403,
+              391,
+              387,
+              394,
+              412,
+              428,
+              442,
+              462
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 354,
+            "cy": 479,
+            "name": "ellipse",
+            "rx": 18,
+            "ry": 20.809,
+            "theta": -0.615
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 58,
+            "cy": 111,
+            "name": "ellipse",
+            "rx": 29,
+            "ry": 26,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 236,
+            "cy": 79,
+            "name": "ellipse",
+            "rx": 37,
+            "ry": 41.231,
+            "theta": 2.253
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 469,
+            "cy": 128,
+            "name": "ellipse",
+            "rx": 44,
+            "ry": 32.802,
+            "theta": -0.656
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 125,
+            "cy": 182,
+            "name": "ellipse",
+            "rx": 25,
+            "ry": 30.61,
+            "theta": -0.901
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 205,
+            "cy": 210,
+            "name": "ellipse",
+            "rx": 40,
+            "ry": 36.878,
+            "theta": -0.709
+          }
+        }
+      ],
+      "size": 160839
+    },
+    "100kX_300kV_0537_14_2.png150282": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0537_14_2.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              52,
+              51,
+              42,
+              25,
+              0,
+              1,
+              17,
+              42,
+              52
+            ],
+            "all_points_y": [
+              271,
+              298,
+              309,
+              331,
+              351,
+              212,
+              225,
+              251,
+              274
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              298,
+              306,
+              320,
+              331,
+              340,
+              356,
+              364,
+              364,
+              363,
+              356,
+              352,
+              296,
+              290,
+              290,
+              299
+            ],
+            "all_points_y": [
+              32,
+              44,
+              55,
+              54,
+              51,
+              36,
+              21,
+              15,
+              9,
+              5,
+              2,
+              0,
+              12,
+              23,
+              35
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              459,
+              454,
+              458,
+              468,
+              474,
+              486,
+              496,
+              504,
+              511,
+              511,
+              496,
+              484,
+              468,
+              458
+            ],
+            "all_points_y": [
+              48,
+              58,
+              72,
+              82,
+              87,
+              87,
+              80,
+              75,
+              62,
+              37,
+              22,
+              23,
+              34,
+              49
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              302,
+              278,
+              274,
+              278,
+              291,
+              313,
+              341,
+              360,
+              368,
+              358,
+              332,
+              301
+            ],
+            "all_points_y": [
+              379,
+              393,
+              411,
+              441,
+              464,
+              469,
+              458,
+              434,
+              415,
+              397,
+              390,
+              379
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 167,
+            "cy": 416,
+            "name": "ellipse",
+            "rx": 35,
+            "ry": 28.425,
+            "theta": -0.686
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 63,
+            "cy": 84,
+            "name": "ellipse",
+            "rx": 15,
+            "ry": 16,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 112,
+            "cy": 137,
+            "name": "ellipse",
+            "rx": 27,
+            "ry": 23,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 282,
+            "cy": 158,
+            "name": "ellipse",
+            "rx": 25.456,
+            "ry": 29,
+            "theta": -0.785
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 370,
+            "cy": 133,
+            "name": "ellipse",
+            "rx": 18,
+            "ry": 16,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 392,
+            "cy": 221,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 20.809,
+            "theta": -0.615
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 427,
+            "cy": 170,
+            "name": "ellipse",
+            "rx": 15,
+            "ry": 14,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 489,
+            "cy": 153,
+            "name": "ellipse",
+            "rx": 22.825,
+            "ry": 24,
+            "theta": 2.074
+          }
+        }
+      ],
+      "size": 150282
+    },
+    "100kX_300kV_0537_15_2.png155747": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0537_15_2.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              16,
+              21,
+              24,
+              24,
+              17,
+              2,
+              3,
+              11,
+              18
+            ],
+            "all_points_y": [
+              108,
+              112,
+              120,
+              132,
+              138,
+              148,
+              95,
+              102,
+              108
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              95,
+              109,
+              120,
+              136,
+              161,
+              177,
+              183,
+              186,
+              189,
+              95,
+              88,
+              89,
+              97
+            ],
+            "all_points_y": [
+              35,
+              46,
+              55,
+              59,
+              56,
+              49,
+              38,
+              23,
+              4,
+              1,
+              8,
+              23,
+              36
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              427,
+              437,
+              452,
+              462,
+              464,
+              421,
+              430
+            ],
+            "all_points_y": [
+              9,
+              18,
+              16,
+              9,
+              0,
+              0,
+              13
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              497,
+              505,
+              512,
+              511,
+              497,
+              498
+            ],
+            "all_points_y": [
+              9,
+              22,
+              22,
+              2,
+              2,
+              10
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              429,
+              438,
+              458,
+              470,
+              465,
+              459,
+              450,
+              420,
+              418,
+              418,
+              430
+            ],
+            "all_points_y": [
+              474,
+              465,
+              468,
+              479,
+              493,
+              500,
+              509,
+              510,
+              495,
+              486,
+              474
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              105,
+              109,
+              121,
+              138,
+              148,
+              148,
+              145,
+              133,
+              119,
+              113,
+              104
+            ],
+            "all_points_y": [
+              493,
+              485,
+              474,
+              474,
+              481,
+              487,
+              497,
+              510,
+              510,
+              505,
+              494
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              479,
+              487,
+              500,
+              511,
+              511,
+              501,
+              491,
+              484,
+              479
+            ],
+            "all_points_y": [
+              247,
+              266,
+              274,
+              278,
+              206,
+              208,
+              218,
+              226,
+              248
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              488,
+              485,
+              492,
+              505,
+              511,
+              511,
+              498,
+              487
+            ],
+            "all_points_y": [
+              317,
+              334,
+              349,
+              359,
+              360,
+              296,
+              298,
+              319
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              378,
+              369,
+              365,
+              370,
+              378,
+              390,
+              409,
+              422,
+              419,
+              405,
+              389,
+              376
+            ],
+            "all_points_y": [
+              47,
+              57,
+              70,
+              90,
+              102,
+              106,
+              92,
+              75,
+              62,
+              52,
+              47,
+              47
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 424,
+            "cy": 91,
+            "name": "ellipse",
+            "rx": 25,
+            "ry": 39.205,
+            "theta": -0.912
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 78,
+            "cy": 123,
+            "name": "ellipse",
+            "rx": 35,
+            "ry": 32,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 301,
+            "cy": 58,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 32.65,
+            "theta": 2.269
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 98,
+            "cy": 382,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 22,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 185,
+            "cy": 394,
+            "name": "ellipse",
+            "rx": 21,
+            "ry": 23.431,
+            "theta": -0.695
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 263,
+            "cy": 402,
+            "name": "ellipse",
+            "rx": 23,
+            "ry": 28.425,
+            "theta": -0.885
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              370,
+              345,
+              333,
+              327,
+              332,
+              340,
+              360,
+              380,
+              404,
+              420,
+              425,
+              430,
+              422,
+              399,
+              388,
+              377,
+              368
+            ],
+            "all_points_y": [
+              374,
+              380,
+              392,
+              404,
+              422,
+              436,
+              453,
+              461,
+              459,
+              451,
+              439,
+              426,
+              407,
+              395,
+              381,
+              372,
+              375
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              442,
+              419,
+              404,
+              406,
+              417,
+              436,
+              451,
+              473,
+              494,
+              501,
+              501,
+              499,
+              489,
+              476,
+              468,
+              452,
+              441
+            ],
+            "all_points_y": [
+              356,
+              373,
+              389,
+              415,
+              435,
+              445,
+              448,
+              444,
+              432,
+              419,
+              405,
+              390,
+              378,
+              363,
+              357,
+              353,
+              357
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 178,
+            "cy": 289,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 30.15,
+            "theta": -3.042
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 379,
+            "cy": 294,
+            "name": "ellipse",
+            "rx": 21,
+            "ry": 18,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 428,
+            "cy": 189,
+            "name": "ellipse",
+            "rx": 25,
+            "ry": 36.069,
+            "theta": -0.766
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 309,
+            "cy": 136,
+            "name": "ellipse",
+            "rx": 28.018,
+            "ry": 26,
+            "theta": 3.106
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 287,
+            "cy": 200,
+            "name": "ellipse",
+            "rx": 29,
+            "ry": 41.037,
+            "theta": -0.82
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 404,
+            "cy": 235,
+            "name": "ellipse",
+            "rx": 23,
+            "ry": 22,
+            "theta": 0
+          }
+        }
+      ],
+      "size": 155747
+    },
+    "100kX_300kV_0537_2_1.png159711": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0537_2_1.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              5,
+              13,
+              17,
+              1,
+              1,
+              5
+            ],
+            "all_points_y": [
+              14,
+              10,
+              2,
+              2,
+              13,
+              14
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              74,
+              81,
+              90,
+              94,
+              96,
+              96,
+              96,
+              94,
+              66,
+              69,
+              75
+            ],
+            "all_points_y": [
+              15,
+              25,
+              26,
+              24,
+              19,
+              14,
+              11,
+              3,
+              2,
+              10,
+              18
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              107,
+              117,
+              126,
+              133,
+              87,
+              90,
+              109
+            ],
+            "all_points_y": [
+              13,
+              14,
+              11,
+              4,
+              2,
+              8,
+              15
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              121,
+              128,
+              140,
+              151,
+              159,
+              167,
+              122,
+              120,
+              122
+            ],
+            "all_points_y": [
+              23,
+              30,
+              30,
+              25,
+              14,
+              4,
+              3,
+              13,
+              23
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              232,
+              242,
+              252,
+              260,
+              225,
+              226,
+              234
+            ],
+            "all_points_y": [
+              16,
+              20,
+              15,
+              3,
+              2,
+              9,
+              17
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              312,
+              319,
+              337,
+              351,
+              363,
+              369,
+              305,
+              314
+            ],
+            "all_points_y": [
+              12,
+              23,
+              25,
+              23,
+              17,
+              3,
+              2,
+              18
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              457,
+              442,
+              429,
+              417,
+              417,
+              421,
+              469,
+              480,
+              508,
+              511,
+              511,
+              503,
+              488,
+              465,
+              455
+            ],
+            "all_points_y": [
+              121,
+              131,
+              141,
+              153,
+              162,
+              172,
+              191,
+              188,
+              160,
+              155,
+              138,
+              128,
+              125,
+              117,
+              122
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              25,
+              39,
+              55,
+              66,
+              68,
+              65,
+              59,
+              45,
+              29,
+              20,
+              8,
+              0,
+              1,
+              7,
+              13,
+              25
+            ],
+            "all_points_y": [
+              131,
+              139,
+              149,
+              157,
+              174,
+              183,
+              193,
+              203,
+              208,
+              208,
+              202,
+              192,
+              141,
+              133,
+              131,
+              131
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              482,
+              470,
+              463,
+              460,
+              460,
+              474,
+              490,
+              510,
+              511,
+              503,
+              488,
+              476
+            ],
+            "all_points_y": [
+              399,
+              406,
+              413,
+              421,
+              438,
+              453,
+              461,
+              458,
+              399,
+              391,
+              393,
+              402
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              145,
+              158,
+              163,
+              176,
+              185,
+              199,
+              208,
+              204,
+              194,
+              136,
+              136,
+              145
+            ],
+            "all_points_y": [
+              481,
+              473,
+              468,
+              463,
+              467,
+              479,
+              490,
+              505,
+              511,
+              510,
+              501,
+              482
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              16,
+              35,
+              49,
+              54,
+              54,
+              44,
+              29,
+              16,
+              0,
+              2,
+              9,
+              18
+            ],
+            "all_points_y": [
+              349,
+              350,
+              334,
+              322,
+              308,
+              291,
+              281,
+              270,
+              260,
+              334,
+              345,
+              350
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 245,
+            "cy": 463,
+            "name": "ellipse",
+            "rx": 21.932,
+            "ry": 30,
+            "theta": -0.753
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 450,
+            "cy": 303,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 26.173,
+            "theta": -0.812
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 89,
+            "cy": 402,
+            "name": "ellipse",
+            "rx": 29,
+            "ry": 30.414,
+            "theta": -0.762
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 87,
+            "cy": 76,
+            "name": "ellipse",
+            "rx": 29,
+            "ry": 21.26,
+            "theta": 2.423
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 175,
+            "cy": 54,
+            "name": "ellipse",
+            "rx": 35,
+            "ry": 36.235,
+            "theta": -0.883
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 70,
+            "cy": 308,
+            "name": "ellipse",
+            "rx": 34,
+            "ry": 27.659,
+            "theta": 2.433
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 366,
+            "cy": 66,
+            "name": "ellipse",
+            "rx": 36,
+            "ry": 46.669,
+            "theta": -0.785
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 182,
+            "cy": 168,
+            "name": "ellipse",
+            "rx": 32,
+            "ry": 30.232,
+            "theta": 2.544
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 323,
+            "cy": 138,
+            "name": "ellipse",
+            "rx": 28,
+            "ry": 31.401,
+            "theta": -0.65
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 218,
+            "cy": 338,
+            "name": "ellipse",
+            "rx": 49,
+            "ry": 41.231,
+            "theta": 2.459
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 224,
+            "cy": 274,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 32.202,
+            "theta": 2.511
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 375,
+            "cy": 256,
+            "name": "ellipse",
+            "rx": 36,
+            "ry": 34.132,
+            "theta": 2.586
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 332,
+            "cy": 323,
+            "name": "ellipse",
+            "rx": 40,
+            "ry": 32.802,
+            "theta": -0.656
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 279,
+            "cy": 396,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 32.202,
+            "theta": 2.511
+          }
+        }
+      ],
+      "size": 159711
+    },
+    "100kX_300kV_0537_4_1.png164816": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0537_4_1.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              29,
+              41,
+              59,
+              82,
+              93,
+              93,
+              80,
+              41,
+              30,
+              26,
+              29
+            ],
+            "all_points_y": [
+              35,
+              51,
+              53,
+              39,
+              31,
+              16,
+              2,
+              2,
+              7,
+              17,
+              36
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              10,
+              18,
+              16,
+              12,
+              2,
+              2,
+              7,
+              12
+            ],
+            "all_points_y": [
+              23,
+              29,
+              35,
+              43,
+              44,
+              27,
+              25,
+              24
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              28,
+              41,
+              47,
+              42,
+              31,
+              17,
+              0,
+              1,
+              11,
+              30
+            ],
+            "all_points_y": [
+              61,
+              67,
+              83,
+              101,
+              110,
+              117,
+              108,
+              61,
+              55,
+              61
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              7,
+              13,
+              10,
+              2,
+              1
+            ],
+            "all_points_y": [
+              205,
+              216,
+              232,
+              247,
+              202
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              89,
+              97,
+              114,
+              129,
+              82,
+              89
+            ],
+            "all_points_y": [
+              502,
+              499,
+              499,
+              511,
+              511,
+              502
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              485,
+              473,
+              468,
+              481,
+              488,
+              504,
+              507,
+              497,
+              484
+            ],
+            "all_points_y": [
+              449,
+              462,
+              474,
+              497,
+              510,
+              509,
+              439,
+              440,
+              450
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              165,
+              144,
+              134,
+              147,
+              161,
+              176,
+              199,
+              207,
+              199,
+              183,
+              161
+            ],
+            "all_points_y": [
+              327,
+              333,
+              341,
+              358,
+              371,
+              380,
+              379,
+              369,
+              349,
+              330,
+              327
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 87,
+            "cy": 132,
+            "name": "ellipse",
+            "rx": 40,
+            "ry": 31.623,
+            "theta": -0.322
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 87,
+            "cy": 214,
+            "name": "ellipse",
+            "rx": 47,
+            "ry": 24.413,
+            "theta": 2.531
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 95,
+            "cy": 296,
+            "name": "ellipse",
+            "rx": 43,
+            "ry": 29.155,
+            "theta": 2.601
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 184,
+            "cy": 309,
+            "name": "ellipse",
+            "rx": 37.202,
+            "ry": 33,
+            "theta": -0.633
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 187,
+            "cy": 401,
+            "name": "ellipse",
+            "rx": 70,
+            "ry": 50.249,
+            "theta": 2.598
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 390,
+            "cy": 464,
+            "name": "ellipse",
+            "rx": 45,
+            "ry": 27,
+            "theta": 2.498
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 221,
+            "cy": 56,
+            "name": "ellipse",
+            "rx": 31.78,
+            "ry": 36,
+            "theta": 2.72
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 321,
+            "cy": 52,
+            "name": "ellipse",
+            "rx": 44,
+            "ry": 25.942,
+            "theta": 2.661
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 291,
+            "cy": 159,
+            "name": "ellipse",
+            "rx": 36.62,
+            "ry": 24,
+            "theta": 2.531
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 282,
+            "cy": 137,
+            "name": "ellipse",
+            "rx": 35,
+            "ry": 38.471,
+            "theta": 2.655
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 365,
+            "cy": 148,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 31,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 402,
+            "cy": 257,
+            "name": "ellipse",
+            "rx": 44,
+            "ry": 31.401,
+            "theta": 2.492
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 382,
+            "cy": 312,
+            "name": "ellipse",
+            "rx": 46,
+            "ry": 40.361,
+            "theta": 2.409
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 463,
+            "cy": 328,
+            "name": "ellipse",
+            "rx": 36.77,
+            "ry": 34,
+            "theta": 2.356
+          }
+        }
+      ],
+      "size": 164816
+    },
+    "100kX_300kV_0537_6_2.png159357": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0537_6_2.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              23,
+              39,
+              55,
+              51,
+              38,
+              20,
+              1,
+              0,
+              11,
+              26
+            ],
+            "all_points_y": [
+              371,
+              379,
+              392,
+              414,
+              433,
+              439,
+              434,
+              383,
+              370,
+              372
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              49,
+              61,
+              60,
+              54,
+              44,
+              26,
+              10,
+              3,
+              3,
+              7,
+              17,
+              30,
+              50
+            ],
+            "all_points_y": [
+              359,
+              369,
+              382,
+              404,
+              418,
+              420,
+              411,
+              402,
+              387,
+              374,
+              363,
+              355,
+              359
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              396,
+              386,
+              379,
+              378,
+              394,
+              448,
+              449,
+              437,
+              420,
+              404,
+              396
+            ],
+            "all_points_y": [
+              460,
+              468,
+              481,
+              498,
+              510,
+              510,
+              505,
+              493,
+              483,
+              466,
+              462
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              477,
+              467,
+              461,
+              467,
+              477,
+              487,
+              503,
+              511,
+              512,
+              502,
+              488,
+              480,
+              477
+            ],
+            "all_points_y": [
+              145,
+              160,
+              169,
+              185,
+              196,
+              205,
+              204,
+              193,
+              134,
+              123,
+              125,
+              135,
+              144
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              33,
+              58,
+              64,
+              60,
+              41,
+              33,
+              16,
+              5,
+              0,
+              1,
+              11,
+              24,
+              32
+            ],
+            "all_points_y": [
+              164,
+              177,
+              196,
+              215,
+              222,
+              231,
+              229,
+              217,
+              207,
+              188,
+              175,
+              167,
+              164
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              36,
+              52,
+              66,
+              74,
+              75,
+              27,
+              38
+            ],
+            "all_points_y": [
+              11,
+              20,
+              17,
+              9,
+              2,
+              1,
+              13
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              17,
+              39,
+              53,
+              60,
+              61,
+              53,
+              37,
+              26,
+              7,
+              2,
+              1,
+              16
+            ],
+            "all_points_y": [
+              56,
+              58,
+              47,
+              38,
+              19,
+              14,
+              9,
+              3,
+              2,
+              12,
+              39,
+              55
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              97,
+              121,
+              132,
+              136,
+              129,
+              119,
+              106,
+              103,
+              69,
+              73,
+              82,
+              98
+            ],
+            "all_points_y": [
+              48,
+              63,
+              57,
+              46,
+              32,
+              12,
+              5,
+              1,
+              2,
+              13,
+              30,
+              50
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              148,
+              168,
+              177,
+              176,
+              169,
+              148,
+              135,
+              118,
+              126,
+              148
+            ],
+            "all_points_y": [
+              38,
+              24,
+              15,
+              7,
+              1,
+              1,
+              22,
+              38,
+              47,
+              39
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              173,
+              165,
+              165,
+              181,
+              200,
+              218,
+              236,
+              254,
+              253,
+              245,
+              221,
+              204,
+              194,
+              186,
+              169
+            ],
+            "all_points_y": [
+              60,
+              71,
+              88,
+              99,
+              118,
+              136,
+              146,
+              135,
+              126,
+              117,
+              109,
+              92,
+              70,
+              60,
+              60
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 192,
+            "cy": 47,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 31.828,
+            "theta": -0.808
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 252,
+            "cy": 80,
+            "name": "ellipse",
+            "rx": 22.672,
+            "ry": 37,
+            "theta": -0.848
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 337,
+            "cy": 129,
+            "name": "ellipse",
+            "rx": 28,
+            "ry": 42.802,
+            "theta": -0.918
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 407,
+            "cy": 139,
+            "name": "ellipse",
+            "rx": 30.529,
+            "ry": 52,
+            "theta": -0.552
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 209,
+            "cy": 422,
+            "name": "ellipse",
+            "rx": 40,
+            "ry": 40.224,
+            "theta": 2.533
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 433,
+            "cy": 258,
+            "name": "ellipse",
+            "rx": 20,
+            "ry": 29.069,
+            "theta": 2.429
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 421,
+            "cy": 322,
+            "name": "ellipse",
+            "rx": 19.849,
+            "ry": 35,
+            "theta": -0.857
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              361,
+              354,
+              354,
+              355,
+              363,
+              378,
+              389,
+              401,
+              406,
+              403,
+              392,
+              376,
+              360
+            ],
+            "all_points_y": [
+              429,
+              438,
+              448,
+              461,
+              469,
+              476,
+              476,
+              469,
+              458,
+              443,
+              432,
+              428,
+              431
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 430,
+            "cy": 414,
+            "name": "ellipse",
+            "rx": 26,
+            "ry": 42.426,
+            "theta": -0.785
+          }
+        }
+      ],
+      "size": 159357
+    },
+    "100kX_300kV_0651_16_0.png131988": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_16_0.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              59,
+              68,
+              63,
+              48,
+              30,
+              1,
+              1,
+              1,
+              48,
+              59
+            ],
+            "all_points_y": [
+              15,
+              34,
+              52,
+              70,
+              85,
+              102,
+              4,
+              2,
+              2,
+              18
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              190,
+              205,
+              215,
+              224,
+              228,
+              187,
+              190
+            ],
+            "all_points_y": [
+              9,
+              14,
+              14,
+              10,
+              2,
+              2,
+              9
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              414,
+              424,
+              437,
+              448,
+              451,
+              458,
+              459,
+              413,
+              416
+            ],
+            "all_points_y": [
+              15,
+              20,
+              20,
+              16,
+              14,
+              7,
+              3,
+              3,
+              13
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              191,
+              174,
+              168,
+              175,
+              187,
+              201,
+              218,
+              229,
+              238,
+              228,
+              213,
+              193,
+              187
+            ],
+            "all_points_y": [
+              26,
+              31,
+              41,
+              57,
+              73,
+              75,
+              68,
+              60,
+              53,
+              33,
+              27,
+              24,
+              26
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              290,
+              300,
+              315,
+              322,
+              322,
+              282,
+              283,
+              289
+            ],
+            "all_points_y": [
+              15,
+              16,
+              11,
+              5,
+              0,
+              1,
+              7,
+              14
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              326,
+              335,
+              348,
+              353,
+              357,
+              312,
+              317,
+              326
+            ],
+            "all_points_y": [
+              11,
+              11,
+              10,
+              6,
+              2,
+              2,
+              8,
+              12
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              259,
+              237,
+              225,
+              217,
+              215,
+              217,
+              230,
+              249,
+              281,
+              304,
+              313,
+              313,
+              313,
+              308,
+              295,
+              283,
+              272,
+              262,
+              253
+            ],
+            "all_points_y": [
+              13,
+              25,
+              35,
+              45,
+              57,
+              74,
+              87,
+              89,
+              83,
+              63,
+              51,
+              37,
+              33,
+              25,
+              9,
+              6,
+              6,
+              10,
+              15
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              453,
+              456,
+              457,
+              464,
+              479,
+              496,
+              508,
+              512,
+              494,
+              473,
+              461,
+              452,
+              452
+            ],
+            "all_points_y": [
+              218,
+              245,
+              257,
+              268,
+              281,
+              277,
+              270,
+              167,
+              169,
+              176,
+              185,
+              204,
+              220
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              436,
+              418,
+              409,
+              406,
+              410,
+              425,
+              439,
+              451,
+              468,
+              478,
+              482,
+              482,
+              481,
+              479,
+              478,
+              467,
+              448,
+              432
+            ],
+            "all_points_y": [
+              141,
+              154,
+              171,
+              186,
+              202,
+              217,
+              222,
+              223,
+              222,
+              214,
+              206,
+              189,
+              178,
+              160,
+              158,
+              150,
+              148,
+              141
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              469,
+              460,
+              447,
+              436,
+              433,
+              434,
+              442,
+              464,
+              470,
+              471,
+              471,
+              467
+            ],
+            "all_points_y": [
+              141,
+              133,
+              133,
+              143,
+              151,
+              163,
+              170,
+              170,
+              164,
+              153,
+              146,
+              141
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 63,
+            "cy": 191,
+            "name": "ellipse",
+            "rx": 15,
+            "ry": 14,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 158,
+            "cy": 107,
+            "name": "ellipse",
+            "rx": 20,
+            "ry": 23,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 153,
+            "cy": 209,
+            "name": "ellipse",
+            "rx": 43,
+            "ry": 57.009,
+            "theta": -0.91
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 271,
+            "cy": 377,
+            "name": "ellipse",
+            "rx": 27,
+            "ry": 23,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 446,
+            "cy": 463,
+            "name": "ellipse",
+            "rx": 32,
+            "ry": 47.434,
+            "theta": -0.606
+          }
+        }
+      ],
+      "size": 131988
+    },
+    "100kX_300kV_0651_16_1.png139288": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_16_1.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              53,
+              67,
+              80,
+              72,
+              46,
+              34,
+              21,
+              8,
+              1,
+              3,
+              16,
+              41,
+              54
+            ],
+            "all_points_y": [
+              290,
+              302,
+              333,
+              367,
+              382,
+              385,
+              387,
+              380,
+              367,
+              285,
+              277,
+              280,
+              292
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 41,
+            "cy": 475,
+            "name": "ellipse",
+            "rx": 27,
+            "ry": 21,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 45,
+            "cy": 91,
+            "name": "ellipse",
+            "rx": 25,
+            "ry": 26,
+            "theta": -0.395
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 399,
+            "cy": 41,
+            "name": "ellipse",
+            "rx": 28,
+            "ry": 22.472,
+            "theta": -0.563
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              461,
+              441,
+              432,
+              431,
+              439,
+              449,
+              466,
+              487,
+              503,
+              509,
+              509,
+              498,
+              483,
+              459
+            ],
+            "all_points_y": [
+              50,
+              58,
+              71,
+              83,
+              100,
+              112,
+              117,
+              114,
+              108,
+              101,
+              76,
+              62,
+              54,
+              50
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              115,
+              86,
+              66,
+              62,
+              68,
+              81,
+              103,
+              126,
+              149,
+              158,
+              157,
+              149,
+              136,
+              114
+            ],
+            "all_points_y": [
+              297,
+              309,
+              325,
+              343,
+              365,
+              374,
+              375,
+              371,
+              356,
+              344,
+              325,
+              305,
+              303,
+              297
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 357,
+            "cy": 142,
+            "name": "ellipse",
+            "rx": 58.258,
+            "ry": 43,
+            "theta": 2.453
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 159,
+            "cy": 263,
+            "name": "ellipse",
+            "rx": 27,
+            "ry": 34.015,
+            "theta": 2.717
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 233,
+            "cy": 214,
+            "name": "ellipse",
+            "rx": 30,
+            "ry": 22.361,
+            "theta": 2.678
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 295,
+            "cy": 333,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 25,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 419,
+            "cy": 331,
+            "name": "ellipse",
+            "rx": 44,
+            "ry": 30.232,
+            "theta": -0.597
+          }
+        }
+      ],
+      "size": 139288
+    },
+    "100kX_300kV_0651_2_0.png143927": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_2_0.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              21,
+              32,
+              36,
+              36,
+              31,
+              20,
+              1,
+              1,
+              13,
+              23
+            ],
+            "all_points_y": [
+              347,
+              361,
+              370,
+              381,
+              386,
+              391,
+              401,
+              326,
+              331,
+              350
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              58,
+              69,
+              71,
+              63,
+              49,
+              32,
+              23,
+              24,
+              35,
+              58
+            ],
+            "all_points_y": [
+              356,
+              364,
+              377,
+              390,
+              396,
+              392,
+              385,
+              368,
+              360,
+              355
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 69,
+            "cy": 470,
+            "name": "ellipse",
+            "rx": 22,
+            "ry": 23,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 207,
+            "cy": 403,
+            "name": "ellipse",
+            "rx": 38,
+            "ry": 29,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 94,
+            "cy": 301,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 27.893,
+            "theta": -0.254
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 87,
+            "cy": 138,
+            "name": "ellipse",
+            "rx": 36,
+            "ry": 30.083,
+            "theta": 2.872
+          }
+        }
+      ],
+      "size": 143927
+    },
+    "100kX_300kV_0651_4_1.png131032": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_4_1.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              86,
+              96,
+              115,
+              124,
+              131,
+              126,
+              113,
+              96,
+              87,
+              85,
+              87
+            ],
+            "all_points_y": [
+              59,
+              71,
+              69,
+              64,
+              45,
+              31,
+              27,
+              28,
+              33,
+              42,
+              60
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              112,
+              90,
+              82,
+              88,
+              93,
+              101,
+              124,
+              144,
+              153,
+              155,
+              148,
+              135,
+              119,
+              113
+            ],
+            "all_points_y": [
+              141,
+              147,
+              158,
+              171,
+              181,
+              189,
+              190,
+              186,
+              183,
+              167,
+              147,
+              139,
+              139,
+              140
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              57,
+              34,
+              29,
+              31,
+              39,
+              48,
+              64,
+              82,
+              92,
+              99,
+              99,
+              90,
+              77,
+              59
+            ],
+            "all_points_y": [
+              264,
+              272,
+              288,
+              303,
+              318,
+              331,
+              335,
+              333,
+              324,
+              311,
+              295,
+              277,
+              270,
+              266
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              120,
+              97,
+              79,
+              74,
+              77,
+              90,
+              97,
+              107,
+              134,
+              153,
+              161,
+              161,
+              144,
+              132,
+              120
+            ],
+            "all_points_y": [
+              343,
+              352,
+              365,
+              373,
+              385,
+              403,
+              416,
+              429,
+              423,
+              411,
+              400,
+              387,
+              361,
+              351,
+              345
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              273,
+              254,
+              244,
+              242,
+              245,
+              247,
+              251,
+              262,
+              278,
+              295,
+              297,
+              297,
+              292,
+              273
+            ],
+            "all_points_y": [
+              298,
+              300,
+              304,
+              318,
+              330,
+              338,
+              346,
+              351,
+              350,
+              343,
+              331,
+              315,
+              309,
+              299
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              456,
+              442,
+              436,
+              433,
+              439,
+              452,
+              458,
+              474,
+              492,
+              500,
+              509,
+              509,
+              494,
+              473,
+              454
+            ],
+            "all_points_y": [
+              126,
+              129,
+              136,
+              146,
+              164,
+              182,
+              194,
+              197,
+              187,
+              176,
+              167,
+              130,
+              124,
+              124,
+              126
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              389,
+              379,
+              369,
+              360,
+              357,
+              358,
+              364,
+              377,
+              392,
+              410,
+              412,
+              417,
+              416,
+              406,
+              388
+            ],
+            "all_points_y": [
+              176,
+              177,
+              182,
+              192,
+              202,
+              212,
+              221,
+              230,
+              231,
+              223,
+              213,
+              206,
+              193,
+              186,
+              176
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              483,
+              464,
+              459,
+              460,
+              478,
+              491,
+              511,
+              510,
+              500,
+              483
+            ],
+            "all_points_y": [
+              240,
+              247,
+              254,
+              272,
+              285,
+              289,
+              267,
+              239,
+              239,
+              239
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              450,
+              435,
+              430,
+              435,
+              441,
+              453,
+              479,
+              476,
+              468,
+              461,
+              449
+            ],
+            "all_points_y": [
+              289,
+              291,
+              299,
+              312,
+              326,
+              334,
+              325,
+              310,
+              296,
+              290,
+              290
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              445,
+              429,
+              426,
+              426,
+              428,
+              434,
+              450,
+              463,
+              473,
+              475,
+              474,
+              469,
+              460,
+              443
+            ],
+            "all_points_y": [
+              345,
+              350,
+              359,
+              369,
+              378,
+              389,
+              392,
+              389,
+              383,
+              374,
+              364,
+              355,
+              350,
+              346
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              392,
+              379,
+              357,
+              345,
+              349,
+              355,
+              362,
+              374,
+              396,
+              409,
+              419,
+              420,
+              417,
+              408,
+              389
+            ],
+            "all_points_y": [
+              374,
+              370,
+              376,
+              388,
+              404,
+              420,
+              432,
+              436,
+              432,
+              426,
+              418,
+              402,
+              386,
+              379,
+              373
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              324,
+              312,
+              304,
+              301,
+              303,
+              310,
+              320,
+              338,
+              345,
+              349,
+              348,
+              342,
+              332,
+              324
+            ],
+            "all_points_y": [
+              409,
+              412,
+              419,
+              429,
+              439,
+              447,
+              452,
+              452,
+              447,
+              437,
+              422,
+              416,
+              411,
+              411
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              341,
+              323,
+              312,
+              304,
+              301,
+              348,
+              367,
+              368,
+              355,
+              340
+            ],
+            "all_points_y": [
+              491,
+              495,
+              500,
+              507,
+              512,
+              511,
+              511,
+              506,
+              494,
+              492
+            ],
+            "name": "polyline"
+          }
+        }
+      ],
+      "size": 131032
+    },
+    "100kX_300kV_0651_6_3.png138819": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_6_3.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              27,
+              35,
+              46,
+              56,
+              58,
+              60,
+              61,
+              56,
+              47,
+              36,
+              21,
+              10,
+              1,
+              1,
+              15,
+              26
+            ],
+            "all_points_y": [
+              263,
+              261,
+              265,
+              280,
+              291,
+              298,
+              310,
+              323,
+              328,
+              333,
+              338,
+              342,
+              346,
+              273,
+              268,
+              262
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              183,
+              200,
+              211,
+              221,
+              227,
+              234,
+              243,
+              175,
+              177,
+              184
+            ],
+            "all_points_y": [
+              493,
+              487,
+              484,
+              485,
+              490,
+              495,
+              509,
+              510,
+              503,
+              494
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              477,
+              465,
+              465,
+              468,
+              475,
+              488,
+              495,
+              510,
+              511,
+              503,
+              490,
+              474
+            ],
+            "all_points_y": [
+              430,
+              438,
+              447,
+              461,
+              477,
+              489,
+              492,
+              496,
+              417,
+              417,
+              422,
+              432
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              485,
+              472,
+              466,
+              466,
+              466,
+              470,
+              480,
+              488,
+              511,
+              509,
+              502,
+              490,
+              485,
+              482
+            ],
+            "all_points_y": [
+              126,
+              129,
+              137,
+              147,
+              161,
+              173,
+              183,
+              188,
+              185,
+              118,
+              118,
+              122,
+              124,
+              127
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              315,
+              294,
+              280,
+              270,
+              265,
+              262,
+              260,
+              262,
+              295,
+              313,
+              322,
+              326,
+              348,
+              364,
+              377,
+              400,
+              419,
+              430,
+              432,
+              428,
+              427,
+              417,
+              393,
+              368,
+              344,
+              327,
+              314
+            ],
+            "all_points_y": [
+              82,
+              89,
+              101,
+              116,
+              126,
+              135,
+              148,
+              167,
+              233,
+              266,
+              289,
+              299,
+              318,
+              326,
+              328,
+              320,
+              302,
+              273,
+              233,
+              202,
+              182,
+              150,
+              123,
+              102,
+              90,
+              83,
+              83
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 426,
+            "cy": 278,
+            "name": "ellipse",
+            "rx": 50,
+            "ry": 62.032,
+            "theta": 2.779
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 211,
+            "cy": 43,
+            "name": "ellipse",
+            "rx": 17,
+            "ry": 19,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 169,
+            "cy": 206,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 26.249,
+            "theta": -0.31
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 152,
+            "cy": 457,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 23.537,
+            "theta": 2.928
+          }
+        }
+      ],
+      "size": 138819
+    },
+    "100kX_300kV_0651_7_2.png132107": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_7_2.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              23,
+              26,
+              26,
+              20,
+              8,
+              2,
+              2,
+              11,
+              23
+            ],
+            "all_points_y": [
+              137,
+              146,
+              156,
+              169,
+              180,
+              182,
+              131,
+              131,
+              136
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              29,
+              31,
+              22,
+              15,
+              2,
+              2,
+              22,
+              31
+            ],
+            "all_points_y": [
+              452,
+              464,
+              476,
+              484,
+              489,
+              427,
+              442,
+              456
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              207,
+              217,
+              231,
+              247,
+              253,
+              256,
+              204,
+              204,
+              205,
+              209
+            ],
+            "all_points_y": [
+              495,
+              491,
+              486,
+              488,
+              497,
+              510,
+              511,
+              510,
+              504,
+              496
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              302,
+              309,
+              326,
+              336,
+              336,
+              294,
+              298,
+              305
+            ],
+            "all_points_y": [
+              13,
+              19,
+              17,
+              8,
+              1,
+              1,
+              8,
+              14
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              108,
+              84,
+              77,
+              78,
+              90,
+              106,
+              138,
+              155,
+              164,
+              161,
+              152,
+              144,
+              130,
+              115,
+              104
+            ],
+            "all_points_y": [
+              17,
+              26,
+              40,
+              57,
+              75,
+              84,
+              78,
+              66,
+              56,
+              42,
+              23,
+              13,
+              9,
+              10,
+              17
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              69,
+              52,
+              47,
+              46,
+              57,
+              86,
+              105,
+              118,
+              125,
+              128,
+              128,
+              116,
+              96,
+              83,
+              66
+            ],
+            "all_points_y": [
+              33,
+              41,
+              52,
+              66,
+              89,
+              100,
+              93,
+              81,
+              70,
+              61,
+              43,
+              28,
+              26,
+              27,
+              33
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 309,
+            "cy": 47,
+            "name": "ellipse",
+            "rx": 25,
+            "ry": 19,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 390,
+            "cy": 45,
+            "name": "ellipse",
+            "rx": 38,
+            "ry": 33.015,
+            "theta": -0.613
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 119,
+            "cy": 315,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 27.313,
+            "theta": -0.415
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 131,
+            "cy": 436,
+            "name": "ellipse",
+            "rx": 41,
+            "ry": 28.302,
+            "theta": -0.559
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 262,
+            "cy": 333,
+            "name": "ellipse",
+            "rx": 22,
+            "ry": 21,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 419,
+            "cy": 418,
+            "name": "ellipse",
+            "rx": 51,
+            "ry": 46.615,
+            "theta": -0.618
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 443,
+            "cy": 341,
+            "name": "ellipse",
+            "rx": 28,
+            "ry": 24,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              293,
+              282,
+              277,
+              281,
+              301,
+              315,
+              324,
+              331,
+              326,
+              319,
+              307,
+              292
+            ],
+            "all_points_y": [
+              230,
+              239,
+              255,
+              276,
+              292,
+              290,
+              278,
+              259,
+              244,
+              235,
+              233,
+              231
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 343,
+            "cy": 266,
+            "name": "ellipse",
+            "rx": 40,
+            "ry": 40.719,
+            "theta": -0.431
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 417,
+            "cy": 214,
+            "name": "ellipse",
+            "rx": 28,
+            "ry": 24,
+            "theta": 0
+          }
+        }
+      ],
+      "size": 132107
+    },
+    "100kX_300kV_0651_9_1.png144081": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_9_1.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              30,
+              33,
+              41,
+              42,
+              40,
+              25,
+              1,
+              1,
+              10,
+              31
+            ],
+            "all_points_y": [
+              81,
+              86,
+              99,
+              108,
+              126,
+              135,
+              136,
+              60,
+              62,
+              83
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              26,
+              41,
+              66,
+              75,
+              82,
+              84,
+              79,
+              6,
+              12,
+              27
+            ],
+            "all_points_y": [
+              31,
+              41,
+              36,
+              29,
+              21,
+              12,
+              2,
+              2,
+              13,
+              33
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              98,
+              127,
+              149,
+              161,
+              166,
+              166,
+              101,
+              80,
+              71,
+              71,
+              79,
+              98
+            ],
+            "all_points_y": [
+              39,
+              32,
+              21,
+              15,
+              10,
+              0,
+              2,
+              6,
+              13,
+              21,
+              31,
+              39
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              369,
+              386,
+              398,
+              408,
+              409,
+              408,
+              345,
+              356,
+              370
+            ],
+            "all_points_y": [
+              496,
+              490,
+              490,
+              499,
+              507,
+              511,
+              511,
+              504,
+              496
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              472,
+              464,
+              461,
+              465,
+              475,
+              478,
+              488,
+              499,
+              511,
+              510,
+              502,
+              490,
+              475,
+              468
+            ],
+            "all_points_y": [
+              219,
+              223,
+              232,
+              249,
+              262,
+              267,
+              272,
+              272,
+              264,
+              233,
+              219,
+              214,
+              217,
+              222
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              104,
+              85,
+              64,
+              45,
+              45,
+              57,
+              66,
+              74,
+              94,
+              121,
+              142,
+              147,
+              141,
+              134,
+              130,
+              126,
+              115,
+              99
+            ],
+            "all_points_y": [
+              395,
+              401,
+              411,
+              418,
+              434,
+              456,
+              472,
+              478,
+              477,
+              461,
+              454,
+              445,
+              425,
+              412,
+              396,
+              393,
+              392,
+              397
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              326,
+              265,
+              263,
+              266,
+              272,
+              290,
+              312,
+              341,
+              358,
+              356,
+              348,
+              340,
+              325
+            ],
+            "all_points_y": [
+              49,
+              72,
+              78,
+              92,
+              105,
+              106,
+              101,
+              90,
+              85,
+              71,
+              54,
+              51,
+              50
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              376,
+              350,
+              330,
+              313,
+              307,
+              307,
+              307,
+              308,
+              311,
+              332,
+              357,
+              376,
+              386,
+              386,
+              383,
+              375
+            ],
+            "all_points_y": [
+              63,
+              65,
+              70,
+              79,
+              87,
+              96,
+              107,
+              116,
+              121,
+              119,
+              111,
+              107,
+              99,
+              85,
+              71,
+              64
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              424,
+              396,
+              384,
+              385,
+              391,
+              406,
+              425,
+              445,
+              455,
+              458,
+              456,
+              448,
+              434,
+              422
+            ],
+            "all_points_y": [
+              107,
+              111,
+              121,
+              134,
+              144,
+              149,
+              145,
+              143,
+              137,
+              124,
+              113,
+              109,
+              108,
+              107
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              295,
+              263,
+              252,
+              247,
+              246,
+              247,
+              254,
+              263,
+              289,
+              307,
+              322,
+              326,
+              323,
+              319,
+              312,
+              302,
+              292
+            ],
+            "all_points_y": [
+              211,
+              225,
+              228,
+              235,
+              247,
+              259,
+              272,
+              275,
+              272,
+              266,
+              256,
+              244,
+              232,
+              222,
+              216,
+              211,
+              211
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              438,
+              421,
+              412,
+              413,
+              419,
+              435,
+              450,
+              459,
+              464,
+              464,
+              458,
+              447,
+              438
+            ],
+            "all_points_y": [
+              293,
+              299,
+              308,
+              323,
+              342,
+              355,
+              355,
+              353,
+              344,
+              333,
+              312,
+              298,
+              293
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              338,
+              307,
+              302,
+              302,
+              311,
+              320,
+              328,
+              340,
+              357,
+              368,
+              371,
+              371,
+              364,
+              364,
+              355,
+              351,
+              346,
+              335
+            ],
+            "all_points_y": [
+              370,
+              377,
+              387,
+              399,
+              420,
+              433,
+              440,
+              440,
+              438,
+              431,
+              420,
+              409,
+              395,
+              392,
+              381,
+              377,
+              374,
+              371
+            ],
+            "name": "polyline"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              460,
+              437,
+              430,
+              425,
+              428,
+              438,
+              453,
+              473,
+              494,
+              497,
+              498,
+              497,
+              492,
+              482,
+              470,
+              458
+            ],
+            "all_points_y": [
+              420,
+              424,
+              435,
+              452,
+              466,
+              478,
+              491,
+              491,
+              481,
+              470,
+              461,
+              447,
+              431,
+              423,
+              421,
+              421
+            ],
+            "name": "polyline"
+          }
+        }
+      ],
+      "size": 144081
+    }
+  },
+  "_via_settings": {
+    "core": {
+      "buffer_size": 18,
+      "default_filepath": "",
+      "filepath": {}
+    },
+    "project": {
+      "name": "0537_masks1"
+    },
+    "ui": {
+      "annotation_editor_fontsize": 0.8,
+      "annotation_editor_height": 25,
+      "image": {
+        "on_image_annotation_editor_placement": "NEAR_REGION",
+        "region_color": "__via_default_region_color__",
+        "region_label": "__via_region_id__",
+        "region_label_font": "10px Sans"
+      },
+      "image_grid": {
+        "img_height": 80,
+        "rshape_fill": "none",
+        "rshape_fill_opacity": 0.3,
+        "rshape_stroke": "yellow",
+        "rshape_stroke_width": 2,
+        "show_image_policy": "all",
+        "show_region_shape": true
+      },
+      "leftsidebar_width": 18
+    }
+  }
+}

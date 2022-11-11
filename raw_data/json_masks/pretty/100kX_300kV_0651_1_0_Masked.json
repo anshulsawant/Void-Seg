@@ -1,0 +1,910 @@
+{
+  "_via_attributes": {
+    "file": {},
+    "region": {}
+  },
+  "_via_data_format_version": "2.0.10",
+  "_via_image_id_list": [
+    "100kX_300kV_0651_1_0.png152369",
+    "100kX_300kV_0651_1_1.png149326",
+    "100kX_300kV_0651_1_2.png147615",
+    "100kX_300kV_0651_1_3.png142442",
+    "100kX_300kV_0651_2_2.png141909",
+    "100kX_300kV_0651_3_1.png134825",
+    "100kX_300kV_0651_3_2.png129821",
+    "100kX_300kV_0651_3_3.png127513",
+    "100kX_300kV_0651_4_0.png127266",
+    "100kX_300kV_0651_5_0.png146057",
+    "100kX_300kV_0651_5_1.png140180",
+    "100kX_300kV_0651_6_1.png138858",
+    "100kX_300kV_0651_6_2.png138407",
+    "100kX_300kV_0651_7_0.png128429",
+    "100kX_300kV_0651_7_1.png125905",
+    "100kX_300kV_0651_8_1.png130686"
+  ],
+  "_via_img_metadata": {
+    "100kX_300kV_0651_1_0.png152369": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_1_0.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 322,
+            "cy": 150,
+            "name": "ellipse",
+            "rx": 32.696,
+            "ry": 31,
+            "theta": -2.733
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 352,
+            "cy": 311,
+            "name": "ellipse",
+            "rx": 25.06,
+            "ry": 29,
+            "theta": -0.499
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 390,
+            "cy": 248,
+            "name": "ellipse",
+            "rx": 32.28,
+            "ry": 27,
+            "theta": -0.283
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 88,
+            "cy": 512,
+            "name": "ellipse",
+            "rx": 20.248,
+            "ry": 22,
+            "theta": 2.789
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 415,
+            "cy": 490,
+            "name": "ellipse",
+            "rx": 31.78,
+            "ry": 20,
+            "theta": -0.421
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 214,
+            "cy": 247,
+            "name": "ellipse",
+            "rx": 26,
+            "ry": 21,
+            "theta": -0.395
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 7,
+            "cy": 479,
+            "name": "ellipse",
+            "rx": 17,
+            "ry": 25.08,
+            "theta": 3.062
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              97,
+              119,
+              160,
+              138
+            ],
+            "all_points_y": [
+              408,
+              451,
+              433,
+              390
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              176,
+              201,
+              242,
+              217
+            ],
+            "all_points_y": [
+              345,
+              394,
+              375,
+              325
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              390,
+              425,
+              435,
+              506,
+              472
+            ],
+            "all_points_y": [
+              294,
+              357,
+              357,
+              323,
+              254
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              422,
+              442,
+              491,
+              471
+            ],
+            "all_points_y": [
+              407,
+              451,
+              428,
+              384
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              510,
+              476,
+              509
+            ],
+            "all_points_y": [
+              419,
+              378,
+              358
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              499,
+              510,
+              510
+            ],
+            "all_points_y": [
+              467,
+              488,
+              458
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              183,
+              262,
+              281,
+              249,
+              188
+            ],
+            "all_points_y": [
+              493,
+              457,
+              493,
+              509,
+              510
+            ],
+            "name": "polygon"
+          }
+        }
+      ],
+      "size": 152369
+    },
+    "100kX_300kV_0651_1_1.png149326": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_1_1.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 320,
+            "cy": 222,
+            "name": "ellipse",
+            "rx": 22,
+            "ry": 22.023,
+            "theta": 3.096
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 78,
+            "cy": 278,
+            "name": "ellipse",
+            "rx": 22,
+            "ry": 21.024,
+            "theta": -0.048
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 450,
+            "cy": 42,
+            "name": "ellipse",
+            "rx": 35,
+            "ry": 24.352,
+            "theta": 2.807
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 507,
+            "cy": 360,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 38.079,
+            "theta": 2.903
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 81,
+            "cy": 367,
+            "name": "ellipse",
+            "rx": 22,
+            "ry": 23,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 222,
+            "cy": 252,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 35,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 276,
+            "cy": 399,
+            "name": "ellipse",
+            "rx": 34,
+            "ry": 29,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 78,
+            "cy": 227,
+            "name": "ellipse",
+            "rx": 45,
+            "ry": 34.928,
+            "theta": 2.911
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              36,
+              25,
+              51,
+              97,
+              81
+            ],
+            "all_points_y": [
+              3,
+              11,
+              54,
+              32,
+              1
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              481,
+              493,
+              510,
+              511
+            ],
+            "all_points_y": [
+              3,
+              27,
+              25,
+              2
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              1,
+              22,
+              1
+            ],
+            "all_points_y": [
+              359,
+              404,
+              413
+            ],
+            "name": "polygon"
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "all_points_x": [
+              54,
+              77,
+              18,
+              2,
+              3
+            ],
+            "all_points_y": [
+              439,
+              487,
+              507,
+              475,
+              459
+            ],
+            "name": "polygon"
+          }
+        }
+      ],
+      "size": 149326
+    },
+    "100kX_300kV_0651_1_2.png147615": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_1_2.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 262,
+            "cy": 176,
+            "name": "ellipse",
+            "rx": 17,
+            "ry": 17,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 20,
+            "cy": 153,
+            "name": "ellipse",
+            "rx": 26,
+            "ry": 22,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 297,
+            "cy": 249,
+            "name": "ellipse",
+            "rx": 25,
+            "ry": 22,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 409,
+            "cy": 295,
+            "name": "ellipse",
+            "rx": 25,
+            "ry": 23.537,
+            "theta": 2.928
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 208,
+            "cy": 351,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 28.862,
+            "theta": 2.897
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 85,
+            "cy": 369,
+            "name": "ellipse",
+            "rx": 25,
+            "ry": 25,
+            "theta": -0.284
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 510,
+            "cy": 183,
+            "name": "ellipse",
+            "rx": 22,
+            "ry": 28.46,
+            "theta": 2.82
+          }
+        }
+      ],
+      "size": 147615
+    },
+    "100kX_300kV_0651_1_3.png142442": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_1_3.png",
+      "regions": [],
+      "size": 142442
+    },
+    "100kX_300kV_0651_2_2.png141909": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_2_2.png",
+      "regions": [],
+      "size": 141909
+    },
+    "100kX_300kV_0651_3_1.png134825": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_3_1.png",
+      "regions": [],
+      "size": 134825
+    },
+    "100kX_300kV_0651_3_2.png129821": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_3_2.png",
+      "regions": [],
+      "size": 129821
+    },
+    "100kX_300kV_0651_3_3.png127513": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_3_3.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 447,
+            "cy": 38,
+            "name": "ellipse",
+            "rx": 18.028,
+            "ry": 20,
+            "theta": 0.339
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 107,
+            "cy": 112,
+            "name": "ellipse",
+            "rx": 30,
+            "ry": 44.598,
+            "theta": 2.309
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 298,
+            "cy": 506,
+            "name": "ellipse",
+            "rx": 17,
+            "ry": 19.698,
+            "theta": -1.153
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 211,
+            "cy": 487,
+            "name": "ellipse",
+            "rx": 21,
+            "ry": 18,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 449,
+            "cy": 235,
+            "name": "ellipse",
+            "rx": 25.962,
+            "ry": 22,
+            "theta": -1.298
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 451,
+            "cy": 364,
+            "name": "ellipse",
+            "rx": 31.906,
+            "ry": 34,
+            "theta": -0.562
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 0,
+            "cy": 184,
+            "name": "ellipse",
+            "rx": 18.028,
+            "ry": 26,
+            "theta": -0.055
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 238,
+            "cy": 342,
+            "name": "ellipse",
+            "rx": 33,
+            "ry": 43.081,
+            "theta": 2.761
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 243,
+            "cy": 272,
+            "name": "ellipse",
+            "rx": 31,
+            "ry": 36,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 61,
+            "cy": 396,
+            "name": "ellipse",
+            "rx": 53.935,
+            "ry": 53,
+            "theta": 0.186
+          }
+        }
+      ],
+      "size": 127513
+    },
+    "100kX_300kV_0651_4_0.png127266": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_4_0.png",
+      "regions": [],
+      "size": 127266
+    },
+    "100kX_300kV_0651_5_0.png146057": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_5_0.png",
+      "regions": [],
+      "size": 146057
+    },
+    "100kX_300kV_0651_5_1.png140180": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_5_1.png",
+      "regions": [],
+      "size": 140180
+    },
+    "100kX_300kV_0651_6_1.png138858": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_6_1.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 160,
+            "cy": 185,
+            "name": "ellipse",
+            "rx": 16,
+            "ry": 22.136,
+            "theta": 2.82
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 85,
+            "cy": 350,
+            "name": "ellipse",
+            "rx": 33,
+            "ry": 39.962,
+            "theta": -0.553
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 15,
+            "cy": 454,
+            "name": "ellipse",
+            "rx": 25.495,
+            "ry": 26,
+            "theta": -0.197
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 469,
+            "cy": 282,
+            "name": "ellipse",
+            "rx": 24.207,
+            "ry": 23,
+            "theta": -0.668
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 323,
+            "cy": 249,
+            "name": "ellipse",
+            "rx": 24,
+            "ry": 24.166,
+            "theta": 2.715
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 161,
+            "cy": 133,
+            "name": "ellipse",
+            "rx": 27.019,
+            "ry": 28,
+            "theta": -0.037
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 444,
+            "cy": 121,
+            "name": "ellipse",
+            "rx": 32,
+            "ry": 38,
+            "theta": 0
+          }
+        }
+      ],
+      "size": 138858
+    },
+    "100kX_300kV_0651_6_2.png138407": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_6_2.png",
+      "regions": [],
+      "size": 138407
+    },
+    "100kX_300kV_0651_7_0.png128429": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_7_0.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 205,
+            "cy": 158,
+            "name": "ellipse",
+            "rx": 32,
+            "ry": 37.483,
+            "theta": 2.981
+          }
+        }
+      ],
+      "size": 128429
+    },
+    "100kX_300kV_0651_7_1.png125905": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_7_1.png",
+      "regions": [],
+      "size": 125905
+    },
+    "100kX_300kV_0651_8_1.png130686": {
+      "file_attributes": {},
+      "filename": "100kX_300kV_0651_8_1.png",
+      "regions": [
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 304,
+            "cy": 251,
+            "name": "ellipse",
+            "rx": 27,
+            "ry": 32.28,
+            "theta": 2.859
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 131,
+            "cy": 307,
+            "name": "ellipse",
+            "rx": 23,
+            "ry": 25,
+            "theta": -3.142
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 295,
+            "cy": 420,
+            "name": "ellipse",
+            "rx": 26,
+            "ry": 29.833,
+            "theta": 2.905
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 183,
+            "cy": 69,
+            "name": "ellipse",
+            "rx": 25,
+            "ry": 28,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 307,
+            "cy": 106,
+            "name": "ellipse",
+            "rx": 36.77,
+            "ry": 30,
+            "theta": 2.356
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 140,
+            "cy": 194,
+            "name": "ellipse",
+            "rx": 41.012,
+            "ry": 45,
+            "theta": -0.024
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 28,
+            "cy": 375,
+            "name": "ellipse",
+            "rx": 25.02,
+            "ry": 25,
+            "theta": -0.04
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 85,
+            "cy": 32,
+            "name": "ellipse",
+            "rx": 28.601,
+            "ry": 29,
+            "theta": -0.637
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 427,
+            "cy": 448,
+            "name": "ellipse",
+            "rx": 30,
+            "ry": 32,
+            "theta": 0
+          }
+        },
+        {
+          "region_attributes": {},
+          "shape_attributes": {
+            "cx": 436,
+            "cy": 353,
+            "name": "ellipse",
+            "rx": 46.648,
+            "ry": 30,
+            "theta": 2.601
+          }
+        }
+      ],
+      "size": 130686
+    }
+  },
+  "_via_settings": {
+    "core": {
+      "buffer_size": 18,
+      "default_filepath": "",
+      "filepath": {}
+    },
+    "project": {
+      "name": "100kX_300kV_0651_1_0_Masked"
+    },
+    "ui": {
+      "annotation_editor_fontsize": 0.8,
+      "annotation_editor_height": 25,
+      "image": {
+        "on_image_annotation_editor_placement": "NEAR_REGION",
+        "region_color": "__via_default_region_color__",
+        "region_label": "__via_region_id__",
+        "region_label_font": "10px Sans"
+      },
+      "image_grid": {
+        "img_height": 80,
+        "rshape_fill": "none",
+        "rshape_fill_opacity": 0.3,
+        "rshape_stroke": "yellow",
+        "rshape_stroke_width": 2,
+        "show_image_policy": "all",
+        "show_region_shape": true
+      },
+      "leftsidebar_width": 18
+    }
+  }
+}
