@@ -4,6 +4,7 @@ from scipy import spatial
 from skimage import measure
 from scipy import ndimage
 import numpy as np
+from sklearn import metrics
 
 def as_np(x):
     return x.numpy() if type(x) != np.ndarray else x
@@ -102,3 +103,154 @@ def pixel_metrics(masks, masks_pred, threshold):
 
 def all_pixel_metrics(masks, masks_pred, thresholds):
     return np.stack([pixel_metrics(masks, masks_pred, t) for t in thresholds], axis = 0)
+
+
+def intersection(bb1, bb2):
+    '''
+    bb1 and bb2: 2D np array of bounding boxes in format (top, left, bottom, right). NOTE: assuming
+    non-zero areas and non-empty arrays. Respective sizes N x 4 and M x 4.
+    '''
+    screen_coords = bb1[0,0] < bb1[0,2] ## If top is lesser than bottom coordinate, we are using
+    ## screen coordinates.
+    y_max_fn = np.maximum if screen_coords else np.minimum
+    y_min_fn = np.minimum if screen_coords else np.maximum
+
+    ## A projection (selecting a column).
+    def p(bb, i):
+        return bb[:, i].reshape((-1, 1))
+
+    t = np.transpose
+
+    ## Each of these is NxN
+    top = y_max_fn(p(bb1, 0), t(p(bb2, 0)))
+    bottom = y_min_fn(p(bb1, 2), t(p(bb2, 2)))
+    left = np.maximum(p(bb1, 1), t(p(bb2, 1)))
+    right = np.minimum(p(bb1, 3), t(p(bb2, 3)))
+
+    x_overlaps = np.maximum(right - left, 0)
+    y_overlaps = y_max_fn(bottom - top, 0)
+
+    intersection = (x_overlaps * y_overlaps)
+
+    return intersection
+
+def area(bb):
+    ## A projection (selecting a column).
+    def p(i):
+        return bb[:, i].reshape((-1, 1))
+    return np.absolute((p(0) - p(2)) * (p(1) - p(3)))
+
+
+def bbox_occlusion(bb, threshold = 0.2):
+    '''
+    bb: A 2D np array of bounding boxes in format (top, left, bottom, right). NOTE: assuming
+    non-zero areas.
+    '''
+
+    ## A note on numpy broadcasting: Numpy aligns the trailing dimensions of arrays. All aligned
+    ## dimensions must be equal or one of them should be 1.  The leading dimensions of the lower
+    ## dimensional array are assumed to be 1. Any dimension equal to 1 is "stretched" (array is
+    ## repeated along that dimension) till the dimension is equal to the corresponding dimension of
+    ## the other array. This is just a looping construct to ensure that looping happens in C and not
+    ## in python.
+    ## See: https://numpy.org/doc/stable/user/basics.broadcasting.html
+
+    inter = intersection(bb, bb)
+    ## Ignore self intersections
+    np.fill_diagonal(inter, 0)
+
+    ## This union is obviously wrong. We can fix it by using masks in a later iterations.
+    ## As we are working in discrete image coordinates here, it is feasible. On the other hand,
+    ## current definition penalizes multiple occlusions, so maybe this definition is okay too.
+    total_occlusion = np.sum(inter, axis = 1).reshape((-1, 1))
+
+    return total_occlusion/area(bb) > threshold
+
+def test_bbox_occlusion():
+    bboxes = np.array([1, 1, 3, 3, 3, 1, 5, 3, 3, 3, 5, 5, 1, 3, 3, 5, 2, 2, 4, 4]
+                      ).reshape((-1, 4))
+
+    occ_3 = bbox_occlusion(bboxes, threshold = 0.3)
+    occ_2 = bbox_occlusion(bboxes, threshold = 0.2)
+
+    print(occ_2)
+    print(occ_3)
+    assert np.all(occ_2)
+    assert np.all(occ_3 == np.array([False, False, False, False, True]).reshape((-1, 1)))
+
+
+def iou(bb1, bb2):
+    '''
+    bb1: N x 4 array of bounding boxes.
+    bb2: M x 4 array of bounding boxes.
+    '''
+    intersections = intersection(bb1, bb2)
+
+    unions = area(bb1) + np.transpose(area(bb2)) - intersections
+    return intersections/unions
+
+def per_image_predictions(bboxes, detections, iou_threshold = 0.5):
+    '''
+    bboxes: Ground truth bboxes N x 4 array of (t, l, b, r) values.
+    detections: M x 5 array of (t, l, b, r, c) values.
+    iou_threshold: Assume a positive detection above this value.
+    '''
+    ious = iou(bboxes, detections[:,range(4)])
+    ## Which of the detections are tp
+    tp = np.amax(ious, axis=0) >= iou_threshold
+    tp_confidence = detections[tp, 4]
+    n_tp = np.sum(tp)
+    ## Number of labels that are not predicted (false negatives)
+    n_fn = bboxes.shape[0] - n_tp
+    ## Which of the detections are fp
+    fp = np.logical_not(tp)
+    fp_confidence = detections[fp, 4]
+    n_fp = np.sum(fp)
+    labels = np.concatenate((np.ones(n_tp + n_fn), np.zeros(n_fp))).reshape((-1 ,1))
+    confidences = np.concatenate((tp_confidence, np.zeros(n_fn), fp_confidence)).reshape((-1, 1))
+    return np.concatenate((labels, confidences), axis=1)
+
+def test_per_image_predictions():
+    bboxes = np.array([1, 1, 3, 3, 3, 1, 5, 3, 3, 3, 5, 5, 1, 3, 3, 5, 2, 2, 4, 4]
+                      ).reshape((-1, 4))
+    detections = np.array(
+        [1, 1, 3, 3, 0.5, 3, 1, 5, 3, 0.51, 3, 3, 5, 5, 0.49, 10, 30, 30, 50, 0.52,
+         100, 300, 300, 500, 0.48, 1000, 3000, 3000, 5000, 0.47]
+    ).reshape((-1, 5))
+    labels_and_confidences = per_image_predictions(bboxes, detections)
+    print(labels_and_confidences)
+    assert np.all((
+        per_image_predictions(bboxes, detections) == np.array([[1.,   0.5 ],
+                                                               [1.,   0.51],
+                                                               [1.,   0.49],
+                                                               [1.,   0.  ],
+                                                               [1.,   0.  ],
+                                                               [0.,   0.52],
+                                                               [0.,   0.48],
+                                                               [0.,   0.47]],
+                                                              ndmin=2)))
+
+def ap(image_gt_and_predictions, iou_threshold=0.5):
+    '''
+    image_gt_and_predictions: A list of tuples. Each tuple consists of the ground truth bboxes and
+    detections.
+    '''
+    all_predictions = np.concatenate(
+        list(map(lambda x: per_image_predictions(x[0], x[1], iou_threshold),
+            image_gt_and_predictions)))
+    return metrics.average_precision_score(all_predictions[:,0], all_predictions[:, 1])
+
+def test_ap():
+    bboxes1 = np.array([1, 1, 3, 3, 3, 1, 5, 3, 3, 3, 5, 5, 1, 3, 3, 5, 2, 2, 4, 4]
+                       ).reshape((-1, 4))
+    detections1 = np.array(
+        [1, 1, 3, 3, 0.6, 3, 1, 5, 3, 0.61, 3, 3, 5, 5, 0.59, 10, 30, 30, 50, 0.42,
+         100, 300, 300, 500, 0.38, 1000, 3000, 3000, 5000, 0.37]
+    ).reshape((-1, 5))
+    bboxes2 = np.array([1, 1, 3, 3, 3, 1, 5, 3, 3, 3, 5, 5, 1, 3, 3, 5, 2, 2, 4, 4]
+                       ).reshape((-1, 4))
+    detections2 = np.array(
+        [1, 1, 3, 3, 0.5, 3, 1, 5, 3, 0.51, 3, 3, 5, 5, 0.49, 10, 30, 30, 50, 0.52,
+         100, 300, 300, 500, 0.48, 1000, 3000, 3000, 5000, 0.47]
+    ).reshape((-1, 5))
+    return ap([(bboxes1, detections1), (bboxes2, detections2)])
