@@ -14,10 +14,10 @@ import tensorflow as tf
 import shutil
 from collections import defaultdict
 
-ROOT = ('/usr/local/google/home/asawant/Void-Segmentation'
+ROOT = ('/usr/local/google/home/asawant/Void-Seg'
         if platform.node().endswith(
             'corp.google.com') or platform.node().endswith('googlers.com')
-        else '/content/Void-Segmentation')
+        else '/content/Void-Seg')
 
 def load_image_paths(base=os.path.join(ROOT, 'dataset'), segment='train'):
   print(f'Loading images from {os.path.join(base, segment)}.')
