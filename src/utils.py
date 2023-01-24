@@ -100,46 +100,53 @@ def anchor_gt_assignment(anchors, gt_boxes, N=100):
   ## max anchor ious for a given gt box
   best_scores = tf.math.reduce_max(ious, axis=0)
   best_anchors = tf.range(anchors.shape[0]) == tf.cast(tf.argmax(ious, axis=0), dtype=tf.int32)
-  anchors_above_threshold = tf.reduce_any(ious >= 0.7, axis=1)
+  anchors_above_threshold = tf.reduce_any(ious >= 0.7, axis=1, name="anchors_above_threshold")
   positive_anchors = tf.logical_or(anchors_above_threshold, best_anchors)
   negative_anchors = tf.logical_and(
       tf.reduce_all(ious < 0.3, axis = 1),
       tf.logical_not(positive_anchors))
-  n_positive_anchors = tf.reduce_sum(tf.cast(positive_anchors, dtype=tf.int32))
-  n_negative_anchors = tf.reduce_sum(tf.cast(negative_anchors, dtype=tf.int32))
+  n_positive_anchors = tf.reduce_sum(tf.cast(positive_anchors, dtype=tf.int32),
+                                     name="n_positive_anchors")
+  n_negative_anchors = tf.reduce_sum(tf.cast(negative_anchors, dtype=tf.int32),
+                                     name="n_negative_anchors")
   ## Don't sample more positive anchors than negative anchors
   num_positive_samples = tf.math.reduce_min([
-    n_negative_anchors, n_positive_anchors, N
-  ])
+    n_negative_anchors, n_positive_anchors
+  ], name="num_positive_samples")
   ## Don't sample more negative samples than 3 times the positive samples
   num_negative_samples = tf.math.reduce_min([
-    3*n_positive_anchors, n_negative_anchors, N
-  ])
+    3*n_positive_anchors, n_negative_anchors
+  ], name="num_negative_samples")
+  if (num_positive_samples + num_negative_samples > N):
+    ratio = num_positive_samples/num_negative_samples
+    num_positive_samples = tf.cast(N/(1+1/ratio), dtype=tf.int32)
+    num_negative_samples = tf.cast(N/(1 + ratio), dtype=tf.int32)
   positive_anchor_indices = tf.cast(tf.reshape(tf.random.shuffle(tf.where(positive_anchors))[
     0:num_positive_samples
-  ], [num_positive_samples]), dtype=tf.int32)
+  ], [num_positive_samples]), dtype=tf.int32, name="positive_anchor_indices")
   negative_anchor_indices = tf.cast(tf.reshape(tf.random.shuffle(tf.where(negative_anchors))[
     0:num_negative_samples
-  ], [num_negative_samples]), dtype=tf.int32)
+  ], [num_negative_samples]), dtype=tf.int32, name="negative_anchor_indices")
   ## Best GT boxes for a given anchor
   best_gt_box_indices = tf.cast(tf.argmax(tf.gather(ious, positive_anchor_indices, axis=0), axis=1),
-                                dtype=tf.int32)
+                                dtype=tf.int32, name="best_gt_box_indices")
   best_gt_boxes = tf.gather(gt_boxes, best_gt_box_indices)
-  positive_anchor_coords = tf.gather(anchors, positive_anchor_indices)
+  positive_anchor_coords = tf.gather(
+      anchors, positive_anchor_indices, name="positive_anchor_coords")
   deltas = perturbations(positive_anchor_coords, best_gt_boxes)
   padding = tf.zeros(
-      N - positive_anchor_indices.shape[0] - negative_anchor_indices.shape[0],
-      6)
-  positive_anchor_slice = tf.stack(
+      (N - positive_anchor_indices.shape[0] - negative_anchor_indices.shape[0],
+      6))
+  positive_anchor_slice = tf.concat(
       [
-          positive_anchor_indices,
-          tf.ones((positive_anchor_indices.shape[0])),
+          tf.cast(tf.reshape(positive_anchor_indices, (-1, 1)), dtype=tf.float32),
+          tf.ones((positive_anchor_indices.shape[0], 1)),
           deltas],
       axis = 1)
-  negative_anchor_slice = tf.stack(
+  negative_anchor_slice = tf.concat(
       [
-          negative_anchor_indices,
-          tf.ones((negative_anchor_indices.shape[0]))*-1.0,
+          tf.cast(tf.reshape(negative_anchor_indices, (-1, 1)), dtype=tf.float32),
+          tf.ones((negative_anchor_indices.shape[0], 1))*-1.0,
           tf.zeros((negative_anchor_indices.shape[0], 4))
       ],
       axis = 1)

@@ -28,22 +28,6 @@ def _load_distance_data(image, mask, distance):
   msk_dist.set_shape([2*512*512])
   return (img, msk_dist)
 
-anchors = utils.anchor_pyramid()
-
-def _load_mask_rcnn_data(image, mask, bboxes):
-  def f(x, y, z):
-    rpn_labels = utils.anchor_gt_assignment(anchors, bboxes)
-    return (
-        images.load_image(x.decode())/255.,
-        rpn_labels)
-  img, rpn_labels = \
-  tf.numpy_function(
-      f,
-      [image, mask, bboxes],
-      [tf.float32, tf.float32])
-  img.set_shape([512, 512, 1])
-  return (img, rpn_labels)
-
 def create_dataset(dir=os.path.join(images.ROOT, 'dataset'), batch=8):
   image_paths, masks, _, _ = images.load_image_paths(base=dir, segment = 'train')
   train_size = len(image_paths)*4//5
@@ -86,15 +70,40 @@ def create_distance_holdout_dataset(dir = os.path.join(images.ROOT, 'dataset'), 
   print(f'Loading {len(image_paths)} images for testing.')
   return tf.data.Dataset.from_tensor_slices((image_paths, masks, distance)).map(_load_distance_data).batch(batch)
 
+def _load_mask_rcnn_data(image, mask, bboxes, anchors):
+  def f(x, y, z):
+    rpn_labels = utils.anchor_gt_assignment(anchors, images.load_bb(z.decode()))
+    return (
+        images.load_image(x.decode())/255.,
+        rpn_labels)
+  img, rpn_labels = \
+  tf.numpy_function(
+      f,
+      [image, mask, bboxes],
+      [tf.float32, tf.float32])
+  img.set_shape([512, 512, 1])
+  return (img, rpn_labels)
+
 def create_mask_rcnn_dataset(dir=os.path.join(images.ROOT, 'dataset'), batch=1):
   image_paths, masks, bboxes, _ = images.load_image_paths(base=dir, segment = 'train')
+  anchors = utils.anchor_pyramid()
   train_size = len(image_paths)*4//5
   print(f'Creating dataset with {len(image_paths)} images.')
   print(f'Using {train_size} images for training.')
   ds = (tf.data.Dataset
         .from_tensor_slices((image_paths, masks, bboxes))
         .shuffle(buffer_size=100000)
-        .map(_load_mask_rcnn_data))
+        .map(lambda x,y,z : _load_mask_rcnn_data(x, y, z, anchors)))
   train_ds = ds.take(train_size).batch(batch).prefetch(2)
   val_ds = ds.skip(train_size).batch(batch).prefetch(2)
   return (train_ds, val_ds)
+
+import importlib
+def test_create_mask_rcnn_dataset():
+  importlib.invalidate_caches()
+  importlib.reload(utils)
+  train_ds, _ = create_mask_rcnn_dataset(batch=2)
+  for x, y in train_ds:
+    print(x.shape)
+    print(y.shape)
+    break
