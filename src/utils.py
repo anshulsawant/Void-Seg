@@ -152,36 +152,6 @@ def anchor_gt_assignment(anchors, gt_boxes, N=100):
       axis = 1)
   return tf.concat([positive_anchor_slice, negative_anchor_slice, padding], axis=0)
 
-class RpnLoss():
-    def __init__(self, anchors):
-        self.anchors = anchors
-
-    def loss(self, rpn_labels, rpn_output):
-        rpn_probs = rpn_output[0]
-        rpn_deltas = rpn_output[1]
-        anchor_labels = rpn_labels[:,1]
-        positive_anchor_indices = tf.cast(
-            tf.gather(anchor_labels, tf.where(tf.equal(anchor_labels, 1.0))), tf.int32)
-        print(positive_anchor_indices)
-        negative_anchor_indices = tf.cast(
-            tf.gather(anchor_labels, tf.where(tf.equal(anchor_labels, -1.0))), tf.int32)
-        print(negative_anchor_indices)
-        deltas = tf.gather(rpn_labels[:, 2:6], positive_anchor_indices)
-        sampled_rpn_probs = tf.gather(
-            rpn_probs,
-            tf.concat(positive_anchor_indices, negative_anchor_indices), axis = 0)
-        y_true = tf.concat(
-            [tf.ones((tf.shape(positive_anchor_indices)[0], 1)),
-            tf.zeros((tf.shape(negative_anchor_indices)[0], 1))],
-            axis = 0)
-        sampled_rpn_deltas = tf.gather(
-            rpn_deltas,
-            positive_anchor_indices)
-        classification_loss = keras.losses.SparseCategoricalCrossentropy()(
-            y_true, sampled_rpn_probs)
-        regression_loss = keras.losses.Huber()(deltas, sampled_rpn_deltas)
-        return classification_loss + regression_loss
-
 
 def anchor_centers(shape, stride):
   '''
@@ -198,19 +168,21 @@ def anchor_centers(shape, stride):
 
 def anchors(shape, sizes, ratios, stride):
   ys, xs = anchor_centers(shape, stride)
-  ## Anchors of given size and ratio
+  ## Anchors of given size and ratio.
   def f(size, ratio):
+    ## Size is scaled by stride.
+    sz = stride * 2
     r = tf.math.sqrt(ratio)
     ## w*h = size*size; w/h = ratio
-    w = tf.ones([xs.shape[0]])*r*size
-    h = tf.ones([ys.shape[0]])*size/r
+    w = tf.ones([xs.shape[0]])*r*sz
+    h = tf.ones([ys.shape[0]])*sz/r
     return corner(tf.stack([ys, xs, h, w], axis=1))
     return corner(tf.stack([ys, xs, h, w], axis=1))
   ## Anchors of given size
   return tf.concat([f(size, ratio) for size in sizes for ratio in ratios], axis=0)
 
 def anchor_pyramid(shape = (512,512),
-                   sizes = [16, 32, 64, 128, 256],
+                   sizes = [2],
                    ratios = [0.5, 1.0, 2.0],
                    strides = [4, 8, 16, 32, 64]):
     return tf.concat([anchors(shape, sizes, ratios, stride) for stride in strides],
