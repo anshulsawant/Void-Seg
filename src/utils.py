@@ -99,7 +99,11 @@ def anchor_gt_assignment(anchors, gt_boxes, N=100):
   ious = iou(anchors, gt_boxes)
   ## max anchor ious for a given gt box
   best_scores = tf.math.reduce_max(ious, axis=0)
-  best_anchors = tf.range(anchors.shape[0]) == tf.cast(tf.argmax(ious, axis=0), dtype=tf.int32)
+  just_true = tf.repeat(True, best_scores.shape[0])
+  best_anchors = tf.scatter_nd(
+      indices = tf.reshape(tf.cast(tf.argmax(ious, axis=0), dtype=tf.int32), (-1, 1)),
+      updates = just_true,
+      shape = [anchors.shape[0]])
   anchors_above_threshold = tf.reduce_any(ious >= 0.7, axis=1, name="anchors_above_threshold")
   positive_anchors = tf.logical_or(anchors_above_threshold, best_anchors)
   negative_anchors = tf.logical_and(
@@ -117,10 +121,14 @@ def anchor_gt_assignment(anchors, gt_boxes, N=100):
   num_negative_samples = tf.math.reduce_min([
     3*n_positive_anchors, n_negative_anchors
   ], name="num_negative_samples")
+  print(num_positive_samples)
+  print(num_negative_samples)
   if (num_positive_samples + num_negative_samples > N):
     ratio = num_positive_samples/num_negative_samples
     num_positive_samples = tf.cast(N/(1+1/ratio), dtype=tf.int32)
     num_negative_samples = tf.cast(N/(1 + ratio), dtype=tf.int32)
+  print(num_positive_samples)
+  print(num_negative_samples)
   positive_anchor_indices = tf.cast(tf.reshape(tf.random.shuffle(tf.where(positive_anchors))[
     0:num_positive_samples
   ], [num_positive_samples]), dtype=tf.int32, name="positive_anchor_indices")

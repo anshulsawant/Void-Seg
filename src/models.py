@@ -231,7 +231,7 @@ def rpn_test():
   m = models.region_proposal_model(backbone, fpn)
   for x, y in ds:
     print(x.shape)
-    print(y.shape)
+    print(y)
     x = tf.expand_dims(x, 0)
     y = tf.expand_dims(y, 0)
     with tf.GradientTape() as tape:
