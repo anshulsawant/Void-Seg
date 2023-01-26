@@ -191,7 +191,7 @@ def train_rpn(epochs = 10, lr = 0.0001, model = None, colab = True):
     logs = "logs/" + datetime.now().strftime("%Y%m%d-%H%M%S")
     tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = logs,
                                                      histogram_freq = 1,
-                                                     profile_batch = '500,520')
+                                                     profile_batch = '1')
     callbacks.append(tboard_callback)
   rpn.fit(
       training_data,
