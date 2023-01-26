@@ -77,7 +77,6 @@ def perturbations(anchors, boxes):
   tw = tf.math.log(b[:,3]/a[:, 3])
   return tf.stack([ty, tx, th, tw], axis = 1)
 
-@tf.function
 def anchor_gt_assignment(anchors, gt_boxes, N=100):
   '''
   anchors: of shape [num_anchors, 4]
