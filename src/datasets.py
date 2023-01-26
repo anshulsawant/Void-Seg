@@ -89,12 +89,14 @@ def create_mask_rcnn_dataset(dir=os.path.join(images.ROOT, 'dataset'), batch=1):
   image_paths, _, bboxes, _ = images.load_image_paths(base=dir, segment = 'train')
   anchors = utils.anchor_pyramid()
   train_size = len(image_paths)*4//5
+  def load(x, y):
+    return _load_mask_rcnn_data(x, y, anchors)
   print(f'Creating dataset with {len(image_paths)} images.')
   print(f'Using {train_size} images for training.')
   ds = (tf.data.Dataset
         .from_tensor_slices((image_paths, bboxes))
         .shuffle(buffer_size=100000)
-        .map(lambda x,y : _load_mask_rcnn_data(x, y, anchors)))
+        .map(load))
   train_ds = ds.take(train_size).batch(batch).prefetch(2)
   val_ds = ds.skip(train_size).batch(batch).prefetch(2)
   return (train_ds, val_ds)
@@ -103,9 +105,11 @@ def mask_rcnn_dev_dataset():
   image = '/usr/local/google/home/asawant/Void-Segmentation/dataset/train/images/100kX_300kV_0537_7_2_flip_rot270.png'
   bbox =  '/usr/local/google/home/asawant/Void-Segmentation/dataset/train/bboxes/100kX_300kV_0537_7_2_flip_rot270.tf'
   anchors = utils.anchor_pyramid()
+  def load(x, y):
+    return _load_mask_rcnn_data(x, y, anchors)
   ds = (tf.data.Dataset
         .from_tensor_slices(([image], [bbox]))
-        .map(lambda x,y : _load_mask_rcnn_data(x, y, anchors)))
+        .map(load))
   return ds
 
 
