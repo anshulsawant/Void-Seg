@@ -72,8 +72,6 @@ def create_distance_holdout_dataset(dir = os.path.join(images.ROOT, 'dataset'), 
 
 def _load_mask_rcnn_data(image, bboxes, anchors):
   def f(x, y):
-    tf.print(x.decode())
-    tf.print(y.decode())
     rpn_labels = utils.anchor_gt_assignment(anchors, images.load_bb(y.decode()))
     return (
         images.load_image(x.decode())/255.,
