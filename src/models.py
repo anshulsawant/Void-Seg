@@ -193,7 +193,7 @@ def train_rpn(epochs = 10, lr = 0.0001, model = None, colab = True):
                                                      histogram_freq = 1,
                                                      profile_batch = '500,520')
     callbacks.append(tboard_callback)
-  model.fit(ds_train,
+  rpn.fit(ds_train,
             epochs=2,
             validation_data=ds_test,
             callbacks = callbacks)
