@@ -186,7 +186,7 @@ def anchors(shape, sizes, ratios, stride):
   return tf.concat([f(size, ratio) for size in sizes for ratio in ratios], axis=0)
 
 def anchor_pyramid(shape = (512,512),
-                   sizes = [2],
+                   sizes = [1],
                    ratios = [0.5, 1.0, 2.0],
                    strides = [4, 8, 16, 32, 64]):
     return tf.concat([anchors(shape, sizes, ratios, stride) for stride in strides],
