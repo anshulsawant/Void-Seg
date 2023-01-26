@@ -184,7 +184,7 @@ def train_rpn(epochs=10, lr=0.0001, model=None, take=None, callbacks = [], batch
     rpn.compile(
       keras.optimizers.Adam(learning_rate = lr),
       loss = RpnLoss.loss)
-  training_data, validation_data = datasets.create_mask_rcnn_dataset(batch=4)
+  training_data, validation_data = datasets.create_mask_rcnn_dataset(batch=batch)
   if (take):
     training_data = training_data.take(take[0])
     validation_data = training_data.take(take[1])
