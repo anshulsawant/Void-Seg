@@ -175,7 +175,7 @@ def build_rpn_model(backbone = None, fpn = None):
       keras.optimizers.Adam(learning_rate = lr), loss = RpnLoss.loss)
   return rpn
 
-def train_rpn(epochs=10, lr=0.0001, model=None, colab=True, profile_batch=0, take=None):
+def train_rpn(epochs=10, lr=0.0001, model=None, take=None):
   rpn = model
   if (not rpn):
     backbone = Backbone()
@@ -188,14 +188,6 @@ def train_rpn(epochs=10, lr=0.0001, model=None, colab=True, profile_batch=0, tak
   if (take):
     training_data = training_data.take(take[0])
     validation_data = training_data.take(take[1])
-  callbacks = []
-  if (colab):
-    # Create a TensorBoard callback
-    logs = "logs/" + datetime.now().strftime("%Y%m%d-%H%M%S")
-    tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = logs,
-                                                     histogram_freq = 1,
-                                                     profile_batch = profile_batch)
-    callbacks.append(tboard_callback)
   rpn.fit(
       training_data,
       validation_data = validation_data,
