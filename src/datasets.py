@@ -97,8 +97,8 @@ def create_mask_rcnn_dataset(dir=os.path.join(images.ROOT, 'dataset'), batch=1):
         .from_tensor_slices((image_paths, bboxes))
         .shuffle(buffer_size=100000)
         .map(load))
-  train_ds = ds.take(train_size).batch(batch).prefetch(2)
-  val_ds = ds.skip(train_size).batch(batch).prefetch(2)
+  train_ds = ds.take(train_size).batch(batch).prefetch(10)
+  val_ds = ds.skip(train_size).batch(batch).prefetch(10)
   return (train_ds, val_ds)
 
 def mask_rcnn_dev_dataset():
