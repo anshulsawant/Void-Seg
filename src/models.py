@@ -175,7 +175,7 @@ def build_rpn_model(backbone = None, fpn = None):
       keras.optimizers.Adam(learning_rate = lr), loss = RpnLoss.loss)
   return rpn
 
-def train_rpn(epochs=10, lr=0.0001, model=None, take=None, callbacks = []):
+def train_rpn(epochs=10, lr=0.0001, model=None, take=None, callbacks = [], batch=4):
   rpn = model
   if (not rpn):
     backbone = Backbone()
@@ -184,7 +184,7 @@ def train_rpn(epochs=10, lr=0.0001, model=None, take=None, callbacks = []):
     rpn.compile(
       keras.optimizers.Adam(learning_rate = lr),
       loss = RpnLoss.loss)
-  training_data, validation_data = datasets.create_mask_rcnn_dataset()
+  training_data, validation_data = datasets.create_mask_rcnn_dataset(batch=4)
   if (take):
     training_data = training_data.take(take[0])
     validation_data = training_data.take(take[1])
