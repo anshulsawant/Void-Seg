@@ -138,10 +138,6 @@ class RpnLoss():
     def _per_batch_loss(x):
        rpn_labels = x[0]
        rpn_outputs = x[1]
-       print("HAHAHAHAHAHAHAHAHAHAHAHA")
-       print(rpn_labels.shape)
-       print(rpn_outputs.shape)
-       print(rpn_labels)
        anchor_labels = tf.cast(rpn_labels[:,1], dtype=tf.int32)
        positive_indices = tf.where(tf.equal(anchor_labels, 1))
        negative_indices = tf.where(tf.equal(anchor_labels, -1))
@@ -159,8 +155,6 @@ class RpnLoss():
            [tf.ones((tf.shape(positive_indices)[0], 1)),
             tf.zeros((tf.shape(negative_indices)[0], 1))],
            axis = 0)
-       print(positive_output_indices.shape)
-       print(negative_output_indices.shape)
        output_probs = tf.gather(
            rpn_outputs[:,0:2],
            tf.concat([positive_output_indices, negative_output_indices], axis=0))
@@ -177,7 +171,7 @@ def train_rpn(epochs = 10, lr = 0.0001):
     training_data, validation_data = datasets.create_mask_rcnn_dataset()
     rpn.compile(
         keras.optimizers.Adam(learning_rate = lr),
-        loss = RpnLoss(utils.anchor_pyramid()).loss)
+        loss = RpnLoss.loss
     rpn.fit(training_data, validation_data = validation_data, epochs=epochs)
 
 def distance_model(size):
