@@ -193,11 +193,11 @@ def train_rpn(epochs = 10, lr = 0.0001, model = None, colab = True):
                                                      histogram_freq = 1,
                                                      profile_batch = '500,520')
     callbacks.append(tboard_callback)
-  rpn.fit(ds_train,
-            epochs=2,
-            validation_data=ds_test,
-            callbacks = callbacks)
-  rpn.fit(training_data, validation_data = validation_data, epochs=epochs)
+  rpn.fit(
+      training_data,
+      validation_data = validation_data,
+      epochs=epochs,
+      callbacks = callbacks)
   return rpn
 
 def distance_model(size):
