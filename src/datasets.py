@@ -105,6 +105,7 @@ def mask_rcnn_dev_dataset():
   image = '/usr/local/google/home/asawant/Void-Segmentation/dataset/train/images/100kX_300kV_0537_7_2_flip_rot270.png'
   bbox =  '/usr/local/google/home/asawant/Void-Segmentation/dataset/train/bboxes/100kX_300kV_0537_7_2_flip_rot270.tf'
   anchors = utils.anchor_pyramid()
+  @tf.function
   def load(x, y):
     return _load_mask_rcnn_data(x, y, anchors)
   ds = (tf.data.Dataset
