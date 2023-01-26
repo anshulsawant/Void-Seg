@@ -164,15 +164,40 @@ class RpnLoss():
        regression_loss = keras.losses.Huber()(label_deltas, output_deltas)
        return classification_loss + regression_loss
 
-def train_rpn(epochs = 10, lr = 0.0001):
+def build_rpn_model(backbone = None, fpn = None):
+  if (not backbone):
+    backbone = Backbone()
+  if (not fpn):
+    fpn = FeaturePyramid()
+  rpn = region_proposal_model(backbone, fpn)
+  rpn.compile(
+      keras.optimizers.Adam(learning_rate = lr), loss = RpnLoss.loss)
+  return rpn
+
+def train_rpn(epochs = 10, lr = 0.0001, model = None, colab = True):
+  rpn = model
+  if (not rpn):
     backbone = Backbone()
     fpn = FeaturePyramid()
     rpn = region_proposal_model(backbone, fpn)
-    training_data, validation_data = datasets.create_mask_rcnn_dataset()
     rpn.compile(
-        keras.optimizers.Adam(learning_rate = lr),
-        loss = RpnLoss.loss)
-    rpn.fit(training_data, validation_data = validation_data, epochs=epochs)
+      keras.optimizers.Adam(learning_rate = lr),
+      loss = RpnLoss.loss)
+  training_data, validation_data = datasets.create_mask_rcnn_dataset()
+  callbacks = []
+  if (colab):
+    # Create a TensorBoard callback
+    logs = "logs/" + datetime.now().strftime("%Y%m%d-%H%M%S")
+    tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = logs,
+                                                     histogram_freq = 1,
+                                                     profile_batch = '500,520')
+    callbacks.append(tboard_callback)
+  model.fit(ds_train,
+            epochs=2,
+            validation_data=ds_test,
+            callbacks = callbacks)
+  rpn.fit(training_data, validation_data = validation_data, epochs=epochs)
+  return rpn
 
 def distance_model(size):
   inputs = keras.Input((size, size))
