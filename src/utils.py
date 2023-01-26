@@ -28,11 +28,11 @@ def iou(bboxes1, bboxes2):
   areas2 = (y2_b - y2_t) * (x2_r - x2_l)
 
   overlaps = tf.math.maximum(
-      0,
+      0.,
       tf.math.minimum(tile(y1_b, bboxes2.shape[0]), y2_b) -
           tf.math.maximum(tile(y1_t, bboxes2.shape[0]), y2_t))
   overlaps = overlaps * tf.math.maximum(
-      0,
+      0.,
       tf.math.minimum(tile(x1_r, bboxes2.shape[0]), x2_r) -
           tf.math.maximum(tile(x1_l, bboxes2.shape[0]), x2_l))
 
