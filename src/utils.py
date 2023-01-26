@@ -121,14 +121,10 @@ def anchor_gt_assignment(anchors, gt_boxes, N=100):
   num_negative_samples = tf.math.reduce_min([
     3*n_positive_anchors, n_negative_anchors
   ], name="num_negative_samples")
-  print(num_positive_samples)
-  print(num_negative_samples)
   if (num_positive_samples + num_negative_samples > N):
     ratio = num_positive_samples/num_negative_samples
     num_positive_samples = tf.cast(N/(1+1/ratio), dtype=tf.int32)
     num_negative_samples = tf.cast(N/(1 + ratio), dtype=tf.int32)
-  print(num_positive_samples)
-  print(num_negative_samples)
   positive_anchor_indices = tf.cast(tf.reshape(tf.random.shuffle(tf.where(positive_anchors))[
     0:num_positive_samples
   ], [num_positive_samples]), dtype=tf.int32, name="positive_anchor_indices")
