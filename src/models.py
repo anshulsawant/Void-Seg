@@ -171,7 +171,7 @@ def train_rpn(epochs = 10, lr = 0.0001):
     training_data, validation_data = datasets.create_mask_rcnn_dataset()
     rpn.compile(
         keras.optimizers.Adam(learning_rate = lr),
-        loss = RpnLoss.loss
+        loss = RpnLoss.loss)
     rpn.fit(training_data, validation_data = validation_data, epochs=epochs)
 
 def distance_model(size):
