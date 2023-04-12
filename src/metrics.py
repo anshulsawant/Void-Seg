@@ -1,4 +1,4 @@
-### Methods for preprocessing and prepping data for a tf pipeline.
+## Methods for preprocessing and prepping data for a tf pipeline.
 
 from scipy import spatial
 from skimage import measure
@@ -101,6 +101,9 @@ def pixel_metrics(masks, masks_pred, threshold):
   metrics = np.mean(np.stack(metrics, axis=0), axis = 0)
   return np.append(metrics, [threshold])
 
+def pixel_ap(masks, masks_pred, thresholds):
+    return metrics.average_precision_score(masks.reshape((-1)), masks_pred.reshape((-1)))
+    
 def all_pixel_metrics(masks, masks_pred, thresholds):
     return np.stack([pixel_metrics(masks, masks_pred, t) for t in thresholds], axis = 0)
 
@@ -159,7 +162,7 @@ def bbox_occlusion(bb, threshold = 0.2):
     ## Ignore self intersections
     np.fill_diagonal(inter, 0)
 
-    ## This union is obviously wrong. We can fix it by using masks in a later iterations.
+    ## This union is obviously wrong. We can fix it by using masks in a later iteration.
     ## As we are working in discrete image coordinates here, it is feasible. On the other hand,
     ## current definition penalizes multiple occlusions, so maybe this definition is okay too.
     total_occlusion = np.sum(inter, axis = 1).reshape((-1, 1))
@@ -173,8 +176,6 @@ def test_bbox_occlusion():
     occ_3 = bbox_occlusion(bboxes, threshold = 0.3)
     occ_2 = bbox_occlusion(bboxes, threshold = 0.2)
 
-    print(occ_2)
-    print(occ_3)
     assert np.all(occ_2)
     assert np.all(occ_3 == np.array([False, False, False, False, True]).reshape((-1, 1)))
 
@@ -185,7 +186,6 @@ def iou(bb1, bb2):
     bb2: M x 4 array of bounding boxes.
     '''
     intersections = intersection(bb1, bb2)
-
     unions = area(bb1) + np.transpose(area(bb2)) - intersections
     return intersections/unions
 
@@ -195,7 +195,10 @@ def per_image_predictions(bboxes, detections, iou_threshold = 0.5):
     detections: M x 5 array of (t, l, b, r, c) values.
     iou_threshold: Assume a positive detection above this value.
     '''
+    print("pip start")
     ious = iou(bboxes, detections[:,range(4)])
+    occluded = bbox_occlusion(bboxes)
+    print(occluded)
     ## Which of the detections are tp
     tp = np.amax(ious, axis=0) >= iou_threshold
     tp_confidence = detections[tp, 4]
@@ -208,7 +211,19 @@ def per_image_predictions(bboxes, detections, iou_threshold = 0.5):
     n_fp = np.sum(fp)
     labels = np.concatenate((np.ones(n_tp + n_fn), np.zeros(n_fp))).reshape((-1 ,1))
     confidences = np.concatenate((tp_confidence, np.zeros(n_fn), fp_confidence)).reshape((-1, 1))
-    return np.concatenate((labels, confidences), axis=1)
+    labels_and_confidences = np.concatenate((labels, confidences), axis=1)
+    labels_and_confidences_occluded = labels_and_confidences[np.nonzero(np.transpose(occluded)[0])]
+    labels_and_confidences_non_occluded = labels_and_confidences[np.nonzero(np.logical_not(np.transpose(occluded)[0]))]
+    labels_and_confidences_occluded.reshape((-1, 2))
+    labels_and_confidences_non_occluded.reshape((-1, 2))
+    print('LABALS AND CONFIDENCES')
+    print(labels_and_confidences)
+    print(labels_and_confidences_occluded)
+    print(labels_and_confidences_non_occluded)
+    print("pip end")
+    return (labels_and_confidences,
+            labels_and_confidences_occluded,
+            labels_and_confidences_non_occluded)
 
 def test_per_image_predictions():
     bboxes = np.array([1, 1, 3, 3, 3, 1, 5, 3, 3, 3, 5, 5, 1, 3, 3, 5, 2, 2, 4, 4]
@@ -217,10 +232,12 @@ def test_per_image_predictions():
         [1, 1, 3, 3, 0.5, 3, 1, 5, 3, 0.51, 3, 3, 5, 5, 0.49, 10, 30, 30, 50, 0.52,
          100, 300, 300, 500, 0.48, 1000, 3000, 3000, 5000, 0.47]
     ).reshape((-1, 5))
-    labels_and_confidences = per_image_predictions(bboxes, detections)
-    print(labels_and_confidences)
+    pip = per_image_predictions(bboxes, detections) 
+    print(per_image_predictions(x[0], x[1], iou_threshold))
+    print(pip[1])
+    print(pip[2])
     assert np.all((
-        per_image_predictions(bboxes, detections) == np.array([[1.,   0.5 ],
+        per_image_predictions(x[0], x[1], iou_threshold) == np.array([[1.,   0.5 ],
                                                                [1.,   0.51],
                                                                [1.,   0.49],
                                                                [1.,   0.  ],
@@ -229,28 +246,97 @@ def test_per_image_predictions():
                                                                [0.,   0.48],
                                                                [0.,   0.47]],
                                                               ndmin=2)))
-
+    assert np.all((
+        pip[1] == np.array([[1.,   0.5 ],
+                                                               [1.,   0.51],
+                                                               [1.,   0.49],
+                                                               [1.,   0.  ],
+                                                               [1.,   0.  ],
+                                                               [0.,   0.52],
+                                                               [0.,   0.48],
+                                                               [0.,   0.47]],
+                                                              ndmin=2)))
+    assert np.all((
+        per_image_predictions(x[0], x[1], iou_threshold) == np.array([[1.,   0.5 ],
+                                                               [1.,   0.51],
+                                                               [1.,   0.49],
+                                                               [1.,   0.  ],
+                                                               [1.,   0.  ],
+                                                               [0.,   0.52],
+                                                               [0.,   0.48],
+                                                               [0.,   0.47]],
+                                                              ndmin=2)))
+    
 def ap(image_gt_and_predictions, iou_threshold=0.5):
     '''
     image_gt_and_predictions: A list of tuples. Each tuple consists of the ground truth bboxes and
     detections.
     '''
-    all_predictions = np.concatenate(
-        list(map(lambda x: per_image_predictions(x[0], x[1], iou_threshold),
-            image_gt_and_predictions)))
-    return metrics.average_precision_score(all_predictions[:,0], all_predictions[:, 1])
+    all_predictions = list(map(lambda x: per_image_predictions(x[0], x[1], iou_threshold),
+            image_gt_and_predictions))
+    all_preds = np.concatenate(list(map(lambda x: x[0], all_predictions)))
+    occluded = np.concatenate(list(map(lambda x: x[1], all_predictions)))
+    print(all_preds)
+    non_occluded = np.concatenate(list(map(lambda x: x[2], all_predictions)))
+    prt = metrics.precision_recall_curve(all_preds[:, 0], all_preds[:, 1])
+    prt_occ = metrics.precision_recall_curve(occluded[:, 0], occluded[:, 1])
+    prt_no_occ = metrics.precision_recall_curve(non_occluded[:, 0], non_occluded[:, 1])
+    print("Thresholds start")
+    print(prt[2])
+    print(prt_occ[2])
+    print(prt_no_occ[2])
+    print("Thresholds end")
+    return metrics.average_precision_score(all_preds[:,0], all_preds[:, 1])
 
 def test_ap():
-    bboxes1 = np.array([1, 1, 3, 3, 3, 1, 5, 3, 3, 3, 5, 5, 1, 3, 3, 5, 2, 2, 4, 4]
+    bboxes1 = np.array([1, 1, 3, 3,
+                        3, 1, 5, 3,
+                        3, 3, 5, 5,
+                        1, 3, 3, 5,
+                        2, 2, 4, 4,
+                        10001, 10002, 10003, 10004]
                        ).reshape((-1, 4))
     detections1 = np.array(
-        [1, 1, 3, 3, 0.6, 3, 1, 5, 3, 0.61, 3, 3, 5, 5, 0.59, 10, 30, 30, 50, 0.42,
-         100, 300, 300, 500, 0.38, 1000, 3000, 3000, 5000, 0.37]
+        [1, 1, 3, 3, 0.6,
+         3, 1, 5, 3, 0.61,
+         3, 3, 5, 5, 0.59,
+         10, 30, 30, 50, 0.42,
+         100, 300, 300, 500, 0.38,
+         1000, 3000, 3000, 5000, 0.37,
+         10001, 10002, 10003, 10004, 0.57]
     ).reshape((-1, 5))
-    bboxes2 = np.array([1, 1, 3, 3, 3, 1, 5, 3, 3, 3, 5, 5, 1, 3, 3, 5, 2, 2, 4, 4]
+    bboxes2 = np.array([1, 1, 3, 3,
+                        3, 1, 5, 3,
+                        3, 3, 5, 5,
+                        1, 3, 3, 5,
+                        2, 2, 4, 4]
                        ).reshape((-1, 4))
     detections2 = np.array(
-        [1, 1, 3, 3, 0.5, 3, 1, 5, 3, 0.51, 3, 3, 5, 5, 0.49, 10, 30, 30, 50, 0.52,
-         100, 300, 300, 500, 0.48, 1000, 3000, 3000, 5000, 0.47]
+        [1, 1, 3, 3, 0.5,
+         3, 1, 5, 3, 0.51,
+         3, 3, 5, 5, 0.49,
+         10, 30, 30, 50, 0.52,
+         100, 300, 300, 500, 0.48,
+         1000, 3000, 3000, 5000, 0.47,
+         1001, 3000, 3000, 5000, 0.56]
     ).reshape((-1, 5))
+    print(bboxes1.shape)
+    print(bboxes1.shape)
+    print(detections1.shape)
+    print(detections2.shape)
     return ap([(bboxes1, detections1), (bboxes2, detections2)])
+
+
+def dataset_ap(gt_files, predictions_files, gt_file_reader, predictions_file_reader):
+    ''' 
+    gt_files: a list of files, each with ground truth bounding boxes for one images.
+    predictions_files: a list of files, each with predicted bounding boxes and objectness
+    score. These predictions should correspond 1-1 with the ground truth files.
+    gt_file_reader: a function that takes path to a single ground truth file and returns 
+    a Nx4 numpy array of bounding boxes.
+    predictions_file_reader: a function that takes path to a single prediction file and returns
+    a Mx5 numpy array of bounding boxes and objectness scores.
+    '''
+    pass
+
+    
