@@ -189,111 +189,100 @@ def iou(bb1, bb2):
     unions = area(bb1) + np.transpose(area(bb2)) - intersections
     return intersections/unions
 
+def detected_bboxes(bboxes, detections, iou_threshold=0.5):
+    '''
+    Map detections to bboxes and bboxes to detections
+    iou_threshold: should be >= 0.5
+    '''
+
+    def fix(x, dtype=np.int32):
+        return x.reshape((-1, 1)).astype(dtype) if x.size == 0 else x.reshape((-1, 1))
+    ious = iou(bboxes, detections[:, range(4)])
+    bboxes_to_detections = np.argmax(ious, axis=1)
+    detections_to_bboxes = np.argmax(ious, axis=0)
+    detected_boxes = np.amax(ious, axis=1) >= iou_threshold
+    detection_indices = fix(np.argmax(ious, axis=1)[detected_boxes])
+    bboxes_without_detections = fix(np.arange(bboxes.shape[0])[
+        np.logical_not(detected_boxes)])
+    detections_without_bboxes = fix(
+        np.setdiff1d(np.arange(detections.shape[0]), detection_indices))
+    dt = detections[:,4].dtype
+    detected_confidence = fix(detections[detection_indices, 4], dtype=dt)
+    bboxes_without_detections_confidence = fix(
+        np.repeat(0.0, bboxes_without_detections.shape[0]), dtype=dt) 
+    detections_without_bboxes_confidence = fix(detections[detections_without_bboxes, 4], dtype=dt)
+    confidences = np.concatenate(
+        (detected_confidence,
+         bboxes_without_detections_confidence,
+         detections_without_bboxes_confidence), axis=0)
+    x = bbox_occlusion(bboxes)
+    occluded = np.concatenate(
+        (x[np.nonzero(detected_boxes)],
+         x[np.nonzero(np.logical_not(detected_boxes))],
+         np.repeat(False, confidences.shape[0] - x.shape[0]).reshape(-1, 1)), axis=0)
+    labels = np.concatenate(
+        (np.repeat(1, bboxes.shape[0]).reshape((-1, 1)),
+         np.repeat(0, confidences.shape[0] - bboxes.shape[0]).reshape((-1,1))), axis=0)
+    return np.concatenate((labels, confidences, occluded), axis=1)
+    
 def per_image_predictions(bboxes, detections, iou_threshold = 0.5):
     '''
     bboxes: Ground truth bboxes N x 4 array of (t, l, b, r) values.
     detections: M x 5 array of (t, l, b, r, c) values.
     iou_threshold: Assume a positive detection above this value.
     '''
-    print("pip start")
     ious = iou(bboxes, detections[:,range(4)])
-    occluded = bbox_occlusion(bboxes)
-    print(occluded)
-    ## Which of the detections are tp
-    tp = np.amax(ious, axis=0) >= iou_threshold
-    tp_confidence = detections[tp, 4]
-    n_tp = np.sum(tp)
-    ## Number of labels that are not predicted (false negatives)
-    n_fn = bboxes.shape[0] - n_tp
-    ## Which of the detections are fp
-    fp = np.logical_not(tp)
-    fp_confidence = detections[fp, 4]
-    n_fp = np.sum(fp)
-    labels = np.concatenate((np.ones(n_tp + n_fn), np.zeros(n_fp))).reshape((-1 ,1))
-    confidences = np.concatenate((tp_confidence, np.zeros(n_fn), fp_confidence)).reshape((-1, 1))
-    labels_and_confidences = np.concatenate((labels, confidences), axis=1)
-    labels_and_confidences_occluded = labels_and_confidences[np.nonzero(np.transpose(occluded)[0])]
-    labels_and_confidences_non_occluded = labels_and_confidences[np.nonzero(np.logical_not(np.transpose(occluded)[0]))]
-    labels_and_confidences_occluded.reshape((-1, 2))
-    labels_and_confidences_non_occluded.reshape((-1, 2))
-    print('LABALS AND CONFIDENCES')
-    print(labels_and_confidences)
-    print(labels_and_confidences_occluded)
-    print(labels_and_confidences_non_occluded)
-    print("pip end")
-    return (labels_and_confidences,
-            labels_and_confidences_occluded,
-            labels_and_confidences_non_occluded)
+    return detected_bboxes(bboxes, detections, iou_threshold=iou_threshold)
 
 def test_per_image_predictions():
-    bboxes = np.array([1, 1, 3, 3, 3, 1, 5, 3, 3, 3, 5, 5, 1, 3, 3, 5, 2, 2, 4, 4]
+    bboxes = np.array([1, 1, 2, 2, 3, 1, 5, 3, 3, 3, 5, 5, 1, 3, 3, 5, 2, 2, 4, 4]
                       ).reshape((-1, 4))
     detections = np.array(
-        [1, 1, 3, 3, 0.5, 3, 1, 5, 3, 0.51, 3, 3, 5, 5, 0.49, 10, 30, 30, 50, 0.52,
+        [3, 1, 5, 3, 0.51, 1, 1, 2.1, 2.1, 0.5, 3, 3, 5, 5, 0.49, 10, 30, 30, 50, 0.52,
          100, 300, 300, 500, 0.48, 1000, 3000, 3000, 5000, 0.47]
     ).reshape((-1, 5))
     pip = per_image_predictions(bboxes, detections) 
-    print(per_image_predictions(x[0], x[1], iou_threshold))
-    print(pip[1])
-    print(pip[2])
-    assert np.all((
-        per_image_predictions(x[0], x[1], iou_threshold) == np.array([[1.,   0.5 ],
-                                                               [1.,   0.51],
-                                                               [1.,   0.49],
-                                                               [1.,   0.  ],
-                                                               [1.,   0.  ],
-                                                               [0.,   0.52],
-                                                               [0.,   0.48],
-                                                               [0.,   0.47]],
-                                                              ndmin=2)))
-    assert np.all((
-        pip[1] == np.array([[1.,   0.5 ],
-                                                               [1.,   0.51],
-                                                               [1.,   0.49],
-                                                               [1.,   0.  ],
-                                                               [1.,   0.  ],
-                                                               [0.,   0.52],
-                                                               [0.,   0.48],
-                                                               [0.,   0.47]],
-                                                              ndmin=2)))
-    assert np.all((
-        per_image_predictions(x[0], x[1], iou_threshold) == np.array([[1.,   0.5 ],
-                                                               [1.,   0.51],
-                                                               [1.,   0.49],
-                                                               [1.,   0.  ],
-                                                               [1.,   0.  ],
-                                                               [0.,   0.52],
-                                                               [0.,   0.48],
-                                                               [0.,   0.47]],
-                                                              ndmin=2)))
+    assert np.all((pip == np.array([
+        [1., 0.5, 0.],
+        [1., 0.51, 1.],
+        [1., 0.49, 1.],
+        [1., 0.0, 1.],
+        [1., 0.0, 1.],
+        [0., 0.52, 0.],
+        [0., 0.48, 0.],
+        [0., 0.47, 0.]])))
+
+def _ap(precision, recall):
+    return -np.sum(np.diff(recall) * np.array(precision)[:-1])
     
 def ap(image_gt_and_predictions, iou_threshold=0.5):
     '''
     image_gt_and_predictions: A list of tuples. Each tuple consists of the ground truth bboxes and
     detections.
     '''
-    all_predictions = list(map(lambda x: per_image_predictions(x[0], x[1], iou_threshold),
-            image_gt_and_predictions))
-    all_preds = np.concatenate(list(map(lambda x: x[0], all_predictions)))
-    occluded = np.concatenate(list(map(lambda x: x[1], all_predictions)))
-    print(all_preds)
-    non_occluded = np.concatenate(list(map(lambda x: x[2], all_predictions)))
-    prt = metrics.precision_recall_curve(all_preds[:, 0], all_preds[:, 1])
+    all_predictions = np.concatenate(list(map(lambda x: per_image_predictions(x[0], x[1], iou_threshold),
+                                              image_gt_and_predictions)))
+    occluded = all_predictions[all_predictions[:,2] == 1.0, :]
+    non_occluded = all_predictions[all_predictions[:,2] == 0.0, :]
+    prt = metrics.precision_recall_curve(all_predictions[:, 0], all_predictions[:, 1])
     prt_occ = metrics.precision_recall_curve(occluded[:, 0], occluded[:, 1])
+    occ_threshold_idxs = np.searchsorted(prt[2], prt_occ[2])
     prt_no_occ = metrics.precision_recall_curve(non_occluded[:, 0], non_occluded[:, 1])
-    print("Thresholds start")
-    print(prt[2])
-    print(prt_occ[2])
-    print(prt_no_occ[2])
-    print("Thresholds end")
-    return metrics.average_precision_score(all_preds[:,0], all_preds[:, 1])
-
+    no_occ_threshold_idxs = np.searchsorted(prt[2], prt_no_occ[2])
+    occ_precision = np.hstack((prt[0][occ_threshold_idxs], 0))
+    occluded = all_predictions[all_predictions[:,2] == 1.0, :]
+    no_occ_precision = np.hstack((prt[0][no_occ_threshold_idxs], 0))
+    return (_ap(prt[0], prt[1]),
+            _ap(occ_precision, prt_occ[1]),
+            _ap(no_occ_precision, prt_no_occ[1])) 
+    
 def test_ap():
     bboxes1 = np.array([1, 1, 3, 3,
                         3, 1, 5, 3,
                         3, 3, 5, 5,
                         1, 3, 3, 5,
                         2, 2, 4, 4,
+                        101, 301, 301, 501,
                         10001, 10002, 10003, 10004]
                        ).reshape((-1, 4))
     detections1 = np.array(
@@ -321,10 +310,11 @@ def test_ap():
          1001, 3000, 3000, 5000, 0.56]
     ).reshape((-1, 5))
     print(bboxes1.shape)
-    print(bboxes1.shape)
+    print(bboxes2.shape)
     print(detections1.shape)
     print(detections2.shape)
-    return ap([(bboxes1, detections1), (bboxes2, detections2)])
+    image_gt_and_predictions = [(bboxes1, detections1), (bboxes2, detections2)]
+    return ap(image_gt_and_predictions)
 
 
 def dataset_ap(gt_files, predictions_files, gt_file_reader, predictions_file_reader):
