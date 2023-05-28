@@ -25,7 +25,7 @@ def filter_tiny_masks(mask, threshold = 50):
 def feature_iou(mask_true, mask_pred):
     mask_pred = as_np(mask_pred)
     mask_true = as_np(mask_true)
-    mask_pred = filter_tiny_masks(mask_pred)
+    ## mask_pred = filter_tiny_masks(mask_pred)
     pred_labels = measure.label(mask_pred) - 1
     true_labels = measure.label(mask_true) - 1
     pred_sizes = np.unique(pred_labels, return_counts=True)[1][1:]
