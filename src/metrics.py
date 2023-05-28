@@ -75,7 +75,7 @@ def feature_metrics(masks, masks_pred, threshold, size = 512):
   counts = np.stack(counts, axis=0)
   ious = np.concatenate(ious)
   iou_sd = np.std(ious)
-  return np.append(_feature_metrics(counts), [threshold, iou_sd])
+  return np.append(_feature_metrics(counts), [threshold])
 
 def all_feature_metrics(masks, masks_pred, thresholds, size = 512):
     return np.stack([feature_metrics(masks, masks_pred, t) for t in thresholds])
