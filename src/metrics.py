@@ -71,7 +71,7 @@ def feature_metrics(masks, masks_pred, threshold, size = 512):
     mask = np.reshape(masks[i], (size, size))
     img_counts, img_ious = feature_counts(mask, mask_pred, threshold=threshold) 
     counts = counts + [img_counts]
-    ious = ious + [ious]
+    ious = ious + [img_ious]
   counts = np.stack(counts, axis=0)
   ious = np.concatenate(ious)
   iou_sd = np.std(ious)
