@@ -75,7 +75,7 @@ def feature_metrics(masks, masks_pred, threshold, size = 512):
   counts = np.stack(counts, axis=0)
   ious = np.concatenate(ious)
   iou_sd = np.std(ious)
-  return np.append(_feature_metrics(counts), [threshold], [iou_sd])
+  return np.append(_feature_metrics(counts), [threshold, iou_sd])
 
 def all_feature_metrics(masks, masks_pred, thresholds, size = 512):
     return np.stack([feature_metrics(masks, masks_pred, t) for t in thresholds])
@@ -106,7 +106,7 @@ def pixel_metrics(masks, masks_pred, threshold):
     metrics = metrics + [_pixel_metrics(masks[i], mask_pred)]
   metrics = np.mean(np.stack(metrics, axis=0), axis = 0)
   sd = np.std(np.stack(metrics, axis=0), axis=0)
-  return np.append(metrics, [threshold]), np.append(sd, [threshold])
+  return np.append(metrics, [threshold, sd])
 
 def pixel_ap(masks, masks_pred):
     return metrics.average_precision_score(masks.reshape((-1)), masks_pred.reshape((-1)))
