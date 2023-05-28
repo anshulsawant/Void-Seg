@@ -104,9 +104,10 @@ def pixel_metrics(masks, masks_pred, threshold):
   for i in range(N):
     mask_pred = masks_pred[i] > threshold
     metrics = metrics + [_pixel_metrics(masks[i], mask_pred)]
-  metrics = np.mean(np.stack(metrics, axis=0), axis = 0)
-  sd = np.std(np.stack(metrics, axis=0), axis=0)
-  return np.append(metrics, [threshold, sd])
+  metrics = np.stack(metrics, axis=0)
+  means = np.mean(metrics, axis = 0)
+  sds = np.std(metrics, axis=0)
+  return np.append(np.concatenate([means, sds]), [threshold])
 
 def pixel_ap(masks, masks_pred):
     return metrics.average_precision_score(masks.reshape((-1)), masks_pred.reshape((-1)))
