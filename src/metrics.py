@@ -25,7 +25,7 @@ def filter_tiny_masks(mask, threshold = 50):
 def feature_iou(mask_true, mask_pred):
     mask_pred = as_np(mask_pred)
     mask_true = as_np(mask_true)
-    ## mask_pred = filter_tiny_masks(mask_pred)
+    mask_pred = filter_tiny_masks(mask_pred)
     pred_labels = measure.label(mask_pred) - 1
     true_labels = measure.label(mask_true) - 1
     pred_sizes = np.unique(pred_labels, return_counts=True)[1][1:]
@@ -43,10 +43,11 @@ def feature_iou(mask_true, mask_pred):
 def feature_counts(mask_true, mask_pred, threshold = 0.5):
     ious = feature_iou(mask_true, mask_pred)
     tp = np.sum(np.any(ious > threshold, axis = 0))
+    iou_max = np.amax(ious, axis=0)
     ## fp + tn = number of predicted features
     fp = ious.shape[1] - tp
     fn = ious.shape[0] - tp
-    return np.array([tp, fp, fn])
+    return np.array([tp, fp, fn]), iou_max
 
 def _feature_metrics(counts):
     n = np.sum(counts, axis = 0)
@@ -64,12 +65,17 @@ def _feature_metrics(counts):
 def feature_metrics(masks, masks_pred, threshold, size = 512):
   N = masks.shape[0]
   counts = []
+  ious = []
   for i in range(N):
     mask_pred = np.reshape(masks_pred[i] > 0.5, (size, size))
     mask = np.reshape(masks[i], (size, size))
-    counts = counts + [feature_counts(mask, mask_pred, threshold = threshold)]
+    img_counts, img_ious = feature_counts(mask, mask_pred, threshold=threshold) 
+    counts = counts + [img_counts]
+    ious = ious + [ious]
   counts = np.stack(counts, axis=0)
-  return np.append(_feature_metrics(counts), [threshold])
+  ious = np.concatenate(ious)
+  iou_sd = np.std(ious)
+  return np.append(_feature_metrics(counts), [threshold], [iou_sd])
 
 def all_feature_metrics(masks, masks_pred, thresholds, size = 512):
     return np.stack([feature_metrics(masks, masks_pred, t) for t in thresholds])
@@ -99,7 +105,8 @@ def pixel_metrics(masks, masks_pred, threshold):
     mask_pred = masks_pred[i] > threshold
     metrics = metrics + [_pixel_metrics(masks[i], mask_pred)]
   metrics = np.mean(np.stack(metrics, axis=0), axis = 0)
-  return np.append(metrics, [threshold])
+  sd = np.std(np.stack(metrics, axis=0), axis=0)
+  return np.append(metrics, [threshold]), np.append(sd, [threshold])
 
 def pixel_ap(masks, masks_pred):
     return metrics.average_precision_score(masks.reshape((-1)), masks_pred.reshape((-1)))
